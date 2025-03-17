@@ -1,24 +1,10 @@
 from langchain_ollama import ChatOllama
-import pandas as pd
-import duckdb
 from typing import Annotated
 from typing_extensions import TypedDict
 from langgraph.graph import StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
-
-def querycsv(query: str) -> str:
-    """
-query resource.csv using SQL only. The resource.csv contains subject and marks column.
-Table name in SQL is always df
-    """
-    df = pd.read_csv("app/backend/resource.csv")
-    # q1= """SELECT col1 FROM df"""
-    query = query.replace("resource.csv", "df")
-
-    mod_df = duckdb.query(query).df()
-    return mod_df.to_string()
-
+from tools import tool
 
 class State(TypedDict):
     messages: Annotated[list, add_messages]
@@ -27,7 +13,7 @@ class State(TypedDict):
 graph_builder = StateGraph(State)
 
 
-tool = querycsv
+tool = tool.querycsv
 tools = [tool]
 llm = ChatOllama(model="granite3.2:2b")
 llm_with_tools = llm.bind_tools(tools)
