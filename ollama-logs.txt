@@ -1,0 +1,1466 @@
+-- Logs begin at Fri 2021-03-19 13:21:32 IST, end at Thu 2025-03-13 23:31:39 IST. --
+Mar 02 18:06:40 shadow systemd[1]: Started Ollama Service.
+Mar 02 18:06:41 shadow ollama[11014]: Couldn't find '/usr/share/ollama/.ollama/id_ed25519'. Generating new private key.
+Mar 02 18:06:41 shadow ollama[11014]: Your new public key is:
+Mar 02 18:06:41 shadow ollama[11014]: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJB1sDzx/h9dZUg1LAemH8uX8zSgjObW5qNPtFqXCrHr
+Mar 02 18:06:41 shadow ollama[11014]: 2025/03/02 18:06:41 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 02 18:06:41 shadow ollama[11014]: time=2025-03-02T18:06:41.962+05:30 level=INFO source=images.go:432 msg="total blobs: 0"
+Mar 02 18:06:41 shadow ollama[11014]: time=2025-03-02T18:06:41.962+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 02 18:06:41 shadow ollama[11014]: time=2025-03-02T18:06:41.963+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 02 18:06:41 shadow ollama[11014]: time=2025-03-02T18:06:41.971+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 02 18:06:42 shadow ollama[11014]: time=2025-03-02T18:06:42.086+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 02 18:06:42 shadow ollama[11014]: time=2025-03-02T18:06:42.086+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="4.7 GiB"
+Mar 02 18:26:11 shadow ollama[11014]: [GIN] 2025/03/02 - 18:26:11 | 200 |     141.565µs |       127.0.0.1 | HEAD     "/"
+Mar 02 18:26:11 shadow ollama[11014]: [GIN] 2025/03/02 - 18:26:11 | 404 |     830.877µs |       127.0.0.1 | POST     "/api/show"
+Mar 02 18:26:13 shadow ollama[11014]: time=2025-03-02T18:26:13.847+05:30 level=INFO source=download.go:176 msg="downloading 04778965089b in 16 100 MB part(s)"
+Mar 02 18:44:54 shadow ollama[11014]: time=2025-03-02T18:44:54.692+05:30 level=INFO source=download.go:176 msg="downloading 7908abcab772 in 1 1.0 KB part(s)"
+Mar 02 18:44:56 shadow ollama[11014]: time=2025-03-02T18:44:56.445+05:30 level=INFO source=download.go:176 msg="downloading 774a15e6f1e5 in 1 77 B part(s)"
+Mar 02 18:44:58 shadow ollama[11014]: time=2025-03-02T18:44:58.041+05:30 level=INFO source=download.go:176 msg="downloading 3188becd6bae in 1 132 B part(s)"
+Mar 02 18:44:59 shadow ollama[11014]: time=2025-03-02T18:44:59.599+05:30 level=INFO source=download.go:176 msg="downloading 0b8127ddf5ee in 1 42 B part(s)"
+Mar 02 18:45:01 shadow ollama[11014]: time=2025-03-02T18:45:01.132+05:30 level=INFO source=download.go:176 msg="downloading 4ce4b16d33a3 in 1 555 B part(s)"
+Mar 02 18:45:09 shadow ollama[11014]: [GIN] 2025/03/02 - 18:45:09 | 200 |        18m57s |       127.0.0.1 | POST     "/api/pull"
+Mar 02 18:45:09 shadow ollama[11014]: [GIN] 2025/03/02 - 18:45:09 | 200 |   19.994847ms |       127.0.0.1 | POST     "/api/show"
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.526+05:30 level=INFO source=server.go:97 msg="system memory" total="7.7 GiB" free="4.2 GiB" free_swap="2.0 GiB"
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.526+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.key_length default=80
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.526+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.value_length default=80
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.527+05:30 level=INFO source=server.go:130 msg=offload library=cpu layers.requested=-1 layers.model=33 layers.offload=0 layers.split="" memory.available="[4.2 GiB]" memory.gpu_overhead="0 B" memory.required.full="4.6 GiB" memory.required.partial="0 B" memory.required.kv="2.5 GiB" memory.required.allocations="[4.1 GiB]" memory.weights.total="3.8 GiB" memory.weights.repeating="3.7 GiB" memory.weights.nonrepeating="102.8 MiB" memory.graph.full="548.0 MiB" memory.graph.partial="543.0 MiB"
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.570+05:30 level=INFO source=server.go:380 msg="starting llama server" cmd="/usr/local/bin/ollama runner --model /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 44027"
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.599+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.599+05:30 level=INFO source=server.go:557 msg="waiting for llama runner to start responding"
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.600+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server error"
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.820+05:30 level=INFO source=runner.go:932 msg="starting go runner"
+Mar 02 18:45:09 shadow ollama[11014]: load_backend: loaded CPU backend from /usr/local/lib/ollama/libggml-cpu-haswell.so
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.974+05:30 level=INFO source=runner.go:935 msg=system info="CPU : LLAMAFILE = 1 | CPU : LLAMAFILE = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | LLAMAFILE = 1 | cgo(gcc)" threads=4
+Mar 02 18:45:09 shadow ollama[11014]: time=2025-03-02T18:45:09.974+05:30 level=INFO source=runner.go:993 msg="Server listening on 127.0.0.1:44027"
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 02 18:45:10 shadow ollama[11014]: time=2025-03-02T18:45:10.110+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server loading model"
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - type  f32:  195 tensors
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - type q4_0:  129 tensors
+Mar 02 18:45:10 shadow ollama[11014]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_vocab: special tokens cache size = 944
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: arch             = phi2
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: vocab type       = BPE
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_vocab          = 51200
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_merges         = 50000
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: vocab_only       = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_ctx_train      = 2048
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_embd           = 2560
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_layer          = 32
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_head           = 32
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_head_kv        = 32
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_rot            = 32
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_swa            = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_embd_head_k    = 80
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_embd_head_v    = 80
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_gqa            = 1
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_embd_k_gqa     = 2560
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_embd_v_gqa     = 2560
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: f_norm_eps       = 1.0e-05
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: f_norm_rms_eps   = 0.0e+00
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_ff             = 10240
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_expert         = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_expert_used    = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: causal attn      = 1
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: pooling type     = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: rope type        = 2
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: rope scaling     = linear
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: freq_base_train  = 10000.0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: freq_scale_train = 1
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: n_ctx_orig_yarn  = 2048
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: rope_finetuned   = unknown
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: ssm_d_conv       = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: ssm_d_inner      = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: ssm_d_state      = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: ssm_dt_rank      = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: ssm_dt_b_c_rms   = 0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: model type       = 3B
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: model ftype      = Q4_0
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: model params     = 2.78 B
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: general.name     = Phi2
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_print_meta: max token length = 256
+Mar 02 18:45:10 shadow ollama[11014]: llm_load_tensors:          CPU model buffer size =  1526.50 MiB
+Mar 02 18:45:22 shadow ollama[11014]: llama_new_context_with_model: n_seq_max     = 4
+Mar 02 18:45:22 shadow ollama[11014]: llama_new_context_with_model: n_ctx         = 8192
+Mar 02 18:45:22 shadow ollama[11014]: llama_new_context_with_model: n_ctx_per_seq = 2048
+Mar 02 18:45:22 shadow ollama[11014]: llama_new_context_with_model: n_batch       = 2048
+Mar 02 18:45:22 shadow ollama[11014]: llama_new_context_with_model: n_ubatch      = 512
+Mar 02 18:45:22 shadow ollama[11014]: llama_new_context_with_model: flash_attn    = 0
+Mar 02 18:45:22 shadow ollama[11014]: llama_new_context_with_model: freq_base     = 10000.0
+Mar 02 18:45:22 shadow ollama[11014]: llama_new_context_with_model: freq_scale    = 1
+Mar 02 18:45:22 shadow ollama[11014]: llama_kv_cache_init: kv_size = 8192, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1
+Mar 02 18:45:24 shadow ollama[11014]: llama_kv_cache_init:        CPU KV buffer size =  2560.00 MiB
+Mar 02 18:45:24 shadow ollama[11014]: llama_new_context_with_model: KV self size  = 2560.00 MiB, K (f16): 1280.00 MiB, V (f16): 1280.00 MiB
+Mar 02 18:45:25 shadow ollama[11014]: llama_new_context_with_model:        CPU  output buffer size =     0.82 MiB
+Mar 02 18:45:25 shadow ollama[11014]: llama_new_context_with_model:        CPU compute buffer size =   563.01 MiB
+Mar 02 18:45:25 shadow ollama[11014]: llama_new_context_with_model: graph nodes  = 1225
+Mar 02 18:45:25 shadow ollama[11014]: llama_new_context_with_model: graph splits = 1
+Mar 02 18:45:27 shadow ollama[11014]: time=2025-03-02T18:45:27.013+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server not responding"
+Mar 02 18:45:27 shadow ollama[11014]: time=2025-03-02T18:45:27.861+05:30 level=INFO source=server.go:596 msg="llama runner started in 18.26 seconds"
+Mar 02 18:45:30 shadow ollama[11014]: [GIN] 2025/03/02 - 18:45:29 | 200 | 20.232500258s |       127.0.0.1 | POST     "/api/generate"
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 02 18:45:53 shadow ollama[11014]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 02 18:45:55 shadow ollama[11014]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 02 18:45:55 shadow ollama[11014]: llama_model_loader: - type  f32:  195 tensors
+Mar 02 18:45:55 shadow ollama[11014]: llama_model_loader: - type q4_0:  129 tensors
+Mar 02 18:45:55 shadow ollama[11014]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_vocab: special tokens cache size = 944
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: arch             = phi2
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: vocab type       = BPE
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: n_vocab          = 51200
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: n_merges         = 50000
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: vocab_only       = 1
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: model type       = ?B
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: model ftype      = all F32
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: model params     = 2.78 B
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: general.name     = Phi2
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 02 18:45:55 shadow ollama[11014]: llm_load_print_meta: max token length = 256
+Mar 02 18:45:55 shadow ollama[11014]: llama_model_load: vocab only - skipping tensors
+Mar 02 18:45:57 shadow ollama[11014]: [GIN] 2025/03/02 - 18:45:57 | 200 |  6.598441193s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 18:46:11 shadow ollama[11014]: [GIN] 2025/03/02 - 18:46:11 | 200 |  2.515858522s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 18:47:22 shadow ollama[11014]: [GIN] 2025/03/02 - 18:47:22 | 200 |  53.04315439s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 18:48:01 shadow ollama[11014]: [GIN] 2025/03/02 - 18:48:01 | 200 | 18.425017753s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 18:48:24 shadow ollama[11014]: [GIN] 2025/03/02 - 18:48:24 | 200 |  9.149960527s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 18:48:31 shadow ollama[11014]: [GIN] 2025/03/02 - 18:48:31 | 200 |  4.395239688s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 19:12:38 shadow ollama[11014]: time=2025-03-02T19:12:38.688+05:30 level=INFO source=server.go:97 msg="system memory" total="7.7 GiB" free="4.7 GiB" free_swap="1.9 GiB"
+Mar 02 19:12:38 shadow ollama[11014]: time=2025-03-02T19:12:38.688+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.key_length default=80
+Mar 02 19:12:38 shadow ollama[11014]: time=2025-03-02T19:12:38.714+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.value_length default=80
+Mar 02 19:12:38 shadow ollama[11014]: time=2025-03-02T19:12:38.715+05:30 level=INFO source=server.go:130 msg=offload library=cpu layers.requested=-1 layers.model=33 layers.offload=0 layers.split="" memory.available="[4.7 GiB]" memory.gpu_overhead="0 B" memory.required.full="4.6 GiB" memory.required.partial="0 B" memory.required.kv="2.5 GiB" memory.required.allocations="[4.6 GiB]" memory.weights.total="3.8 GiB" memory.weights.repeating="3.7 GiB" memory.weights.nonrepeating="102.8 MiB" memory.graph.full="548.0 MiB" memory.graph.partial="543.0 MiB"
+Mar 02 19:12:38 shadow ollama[11014]: time=2025-03-02T19:12:38.829+05:30 level=INFO source=server.go:380 msg="starting llama server" cmd="/usr/local/bin/ollama runner --model /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 44467"
+Mar 02 19:12:38 shadow ollama[11014]: time=2025-03-02T19:12:38.830+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 02 19:12:38 shadow ollama[11014]: time=2025-03-02T19:12:38.831+05:30 level=INFO source=server.go:557 msg="waiting for llama runner to start responding"
+Mar 02 19:12:38 shadow ollama[11014]: time=2025-03-02T19:12:38.831+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server error"
+Mar 02 19:12:39 shadow ollama[11014]: time=2025-03-02T19:12:39.727+05:30 level=INFO source=runner.go:932 msg="starting go runner"
+Mar 02 19:12:39 shadow ollama[11014]: load_backend: loaded CPU backend from /usr/local/lib/ollama/libggml-cpu-haswell.so
+Mar 02 19:12:39 shadow ollama[11014]: time=2025-03-02T19:12:39.879+05:30 level=INFO source=runner.go:935 msg=system info="CPU : LLAMAFILE = 1 | CPU : LLAMAFILE = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | LLAMAFILE = 1 | cgo(gcc)" threads=4
+Mar 02 19:12:39 shadow ollama[11014]: time=2025-03-02T19:12:39.902+05:30 level=INFO source=runner.go:993 msg="Server listening on 127.0.0.1:44467"
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 02 19:12:39 shadow ollama[11014]: time=2025-03-02T19:12:39.966+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server loading model"
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 02 19:12:39 shadow ollama[11014]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 19:12:40 shadow ollama[11014]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 02 19:12:40 shadow ollama[11014]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 02 19:12:40 shadow ollama[11014]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 02 19:12:40 shadow ollama[11014]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 02 19:12:40 shadow ollama[11014]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 02 19:12:40 shadow ollama[11014]: llama_model_loader: - type  f32:  195 tensors
+Mar 02 19:12:40 shadow ollama[11014]: llama_model_loader: - type q4_0:  129 tensors
+Mar 02 19:12:40 shadow ollama[11014]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_vocab: special tokens cache size = 944
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: arch             = phi2
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: vocab type       = BPE
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_vocab          = 51200
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_merges         = 50000
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: vocab_only       = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_ctx_train      = 2048
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_embd           = 2560
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_layer          = 32
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_head           = 32
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_head_kv        = 32
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_rot            = 32
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_swa            = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_embd_head_k    = 80
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_embd_head_v    = 80
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_gqa            = 1
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_embd_k_gqa     = 2560
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_embd_v_gqa     = 2560
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: f_norm_eps       = 1.0e-05
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: f_norm_rms_eps   = 0.0e+00
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_ff             = 10240
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_expert         = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_expert_used    = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: causal attn      = 1
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: pooling type     = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: rope type        = 2
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: rope scaling     = linear
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: freq_base_train  = 10000.0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: freq_scale_train = 1
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: n_ctx_orig_yarn  = 2048
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: rope_finetuned   = unknown
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: ssm_d_conv       = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: ssm_d_inner      = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: ssm_d_state      = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: ssm_dt_rank      = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: ssm_dt_b_c_rms   = 0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: model type       = 3B
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: model ftype      = Q4_0
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: model params     = 2.78 B
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: general.name     = Phi2
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_print_meta: max token length = 256
+Mar 02 19:12:40 shadow ollama[11014]: llm_load_tensors:          CPU model buffer size =  1526.50 MiB
+Mar 02 19:12:55 shadow ollama[11014]: llama_new_context_with_model: n_seq_max     = 4
+Mar 02 19:12:55 shadow ollama[11014]: llama_new_context_with_model: n_ctx         = 8192
+Mar 02 19:12:55 shadow ollama[11014]: llama_new_context_with_model: n_ctx_per_seq = 2048
+Mar 02 19:12:55 shadow ollama[11014]: llama_new_context_with_model: n_batch       = 2048
+Mar 02 19:12:55 shadow ollama[11014]: llama_new_context_with_model: n_ubatch      = 512
+Mar 02 19:12:55 shadow ollama[11014]: llama_new_context_with_model: flash_attn    = 0
+Mar 02 19:12:55 shadow ollama[11014]: llama_new_context_with_model: freq_base     = 10000.0
+Mar 02 19:12:55 shadow ollama[11014]: llama_new_context_with_model: freq_scale    = 1
+Mar 02 19:12:55 shadow ollama[11014]: llama_kv_cache_init: kv_size = 8192, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1
+Mar 02 19:12:57 shadow ollama[11014]: llama_kv_cache_init:        CPU KV buffer size =  2560.00 MiB
+Mar 02 19:12:57 shadow ollama[11014]: llama_new_context_with_model: KV self size  = 2560.00 MiB, K (f16): 1280.00 MiB, V (f16): 1280.00 MiB
+Mar 02 19:12:57 shadow ollama[11014]: llama_new_context_with_model:        CPU  output buffer size =     0.82 MiB
+Mar 02 19:12:57 shadow ollama[11014]: llama_new_context_with_model:        CPU compute buffer size =   563.01 MiB
+Mar 02 19:12:57 shadow ollama[11014]: llama_new_context_with_model: graph nodes  = 1225
+Mar 02 19:12:57 shadow ollama[11014]: llama_new_context_with_model: graph splits = 1
+Mar 02 19:12:57 shadow ollama[11014]: time=2025-03-02T19:12:57.571+05:30 level=INFO source=server.go:596 msg="llama runner started in 18.74 seconds"
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 02 19:12:57 shadow ollama[11014]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - type  f32:  195 tensors
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - type q4_0:  129 tensors
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_vocab: special tokens cache size = 944
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: arch             = phi2
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: vocab type       = BPE
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: n_vocab          = 51200
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: n_merges         = 50000
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: vocab_only       = 1
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: model type       = ?B
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: model ftype      = all F32
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: model params     = 2.78 B
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: general.name     = Phi2
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 02 19:12:58 shadow ollama[11014]: llm_load_print_meta: max token length = 256
+Mar 02 19:12:58 shadow ollama[11014]: llama_model_load: vocab only - skipping tensors
+Mar 02 19:13:11 shadow ollama[11014]: [GIN] 2025/03/02 - 19:13:11 | 200 | 32.642580655s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 19:13:47 shadow ollama[11014]: [GIN] 2025/03/02 - 19:13:47 | 500 |  11.17683364s |       127.0.0.1 | POST     "/api/generate"
+Mar 02 19:13:57 shadow ollama[11014]: [GIN] 2025/03/02 - 19:13:57 | 200 |   65.547306ms |       127.0.0.1 | GET      "/"
+Mar 02 19:13:57 shadow ollama[11014]: [GIN] 2025/03/02 - 19:13:57 | 404 |      13.904µs |       127.0.0.1 | GET      "/favicon.ico"
+Mar 02 19:14:38 shadow ollama[11014]: [GIN] 2025/03/02 - 19:14:38 | 200 |  9.581945768s |       127.0.0.1 | POST     "/api/generate"
+Mar 02 19:15:44 shadow ollama[11014]: [GIN] 2025/03/02 - 19:15:44 | 500 |  45.81497143s |       127.0.0.1 | POST     "/api/generate"
+Mar 02 19:16:01 shadow ollama[11014]: [GIN] 2025/03/02 - 19:16:01 | 200 |  7.781655736s |       127.0.0.1 | POST     "/api/generate"
+Mar 02 19:17:07 shadow ollama[11014]: [GIN] 2025/03/02 - 19:17:07 | 200 |      34.579µs |       127.0.0.1 | HEAD     "/"
+Mar 02 19:17:07 shadow ollama[11014]: [GIN] 2025/03/02 - 19:17:07 | 200 |    2.618609ms |       127.0.0.1 | POST     "/api/generate"
+Mar 02 19:17:16 shadow ollama[11014]: [GIN] 2025/03/02 - 19:17:16 | 200 |      23.579µs |       127.0.0.1 | HEAD     "/"
+Mar 02 19:17:16 shadow ollama[11014]: [GIN] 2025/03/02 - 19:17:16 | 200 |      119.24µs |       127.0.0.1 | GET      "/api/ps"
+Mar 02 19:17:52 shadow systemd[1]: Stopping Ollama Service...
+Mar 02 19:17:52 shadow systemd[1]: Stopped Ollama Service.
+Mar 02 22:21:07 shadow systemd[1]: Started Ollama Service.
+Mar 02 22:21:08 shadow ollama[20305]: 2025/03/02 22:21:08 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 02 22:21:08 shadow ollama[20305]: time=2025-03-02T22:21:08.198+05:30 level=INFO source=images.go:432 msg="total blobs: 6"
+Mar 02 22:21:08 shadow ollama[20305]: time=2025-03-02T22:21:08.199+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 02 22:21:08 shadow ollama[20305]: time=2025-03-02T22:21:08.199+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 02 22:21:08 shadow ollama[20305]: time=2025-03-02T22:21:08.199+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 02 22:21:08 shadow ollama[20305]: time=2025-03-02T22:21:08.211+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 02 22:21:08 shadow ollama[20305]: time=2025-03-02T22:21:08.211+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="4.5 GiB"
+Mar 02 22:21:11 shadow ollama[20305]: [GIN] 2025/03/02 - 22:21:11 | 200 |      68.634µs |       127.0.0.1 | HEAD     "/"
+Mar 02 22:21:11 shadow ollama[20305]: [GIN] 2025/03/02 - 22:21:11 | 200 |   25.671713ms |       127.0.0.1 | POST     "/api/show"
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.356+05:30 level=INFO source=server.go:97 msg="system memory" total="7.7 GiB" free="4.5 GiB" free_swap="1.6 GiB"
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.356+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.key_length default=80
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.356+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.value_length default=80
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.356+05:30 level=INFO source=server.go:130 msg=offload library=cpu layers.requested=-1 layers.model=33 layers.offload=0 layers.split="" memory.available="[4.5 GiB]" memory.gpu_overhead="0 B" memory.required.full="4.6 GiB" memory.required.partial="0 B" memory.required.kv="2.5 GiB" memory.required.allocations="[4.5 GiB]" memory.weights.total="3.8 GiB" memory.weights.repeating="3.7 GiB" memory.weights.nonrepeating="102.8 MiB" memory.graph.full="548.0 MiB" memory.graph.partial="543.0 MiB"
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.357+05:30 level=INFO source=server.go:380 msg="starting llama server" cmd="/usr/local/bin/ollama runner --model /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 46635"
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.357+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.357+05:30 level=INFO source=server.go:557 msg="waiting for llama runner to start responding"
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.357+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server error"
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.376+05:30 level=INFO source=runner.go:932 msg="starting go runner"
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.377+05:30 level=INFO source=runner.go:935 msg=system info="CPU : LLAMAFILE = 1 | CPU : LLAMAFILE = 1 | cgo(gcc)" threads=4
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.377+05:30 level=INFO source=runner.go:993 msg="Server listening on 127.0.0.1:46635"
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - type  f32:  195 tensors
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - type q4_0:  129 tensors
+Mar 02 22:21:11 shadow ollama[20305]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 02 22:21:11 shadow ollama[20305]: time=2025-03-02T22:21:11.610+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server loading model"
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_vocab: special tokens cache size = 944
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: arch             = phi2
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: vocab type       = BPE
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_vocab          = 51200
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_merges         = 50000
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: vocab_only       = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_ctx_train      = 2048
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_embd           = 2560
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_layer          = 32
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_head           = 32
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_head_kv        = 32
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_rot            = 32
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_swa            = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_embd_head_k    = 80
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_embd_head_v    = 80
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_gqa            = 1
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_embd_k_gqa     = 2560
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_embd_v_gqa     = 2560
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: f_norm_eps       = 1.0e-05
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: f_norm_rms_eps   = 0.0e+00
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_ff             = 10240
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_expert         = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_expert_used    = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: causal attn      = 1
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: pooling type     = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: rope type        = 2
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: rope scaling     = linear
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: freq_base_train  = 10000.0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: freq_scale_train = 1
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: n_ctx_orig_yarn  = 2048
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: rope_finetuned   = unknown
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: ssm_d_conv       = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: ssm_d_inner      = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: ssm_d_state      = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: ssm_dt_rank      = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: ssm_dt_b_c_rms   = 0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: model type       = 3B
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: model ftype      = Q4_0
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: model params     = 2.78 B
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: general.name     = Phi2
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_print_meta: max token length = 256
+Mar 02 22:21:11 shadow ollama[20305]: llm_load_tensors:          CPU model buffer size =  1526.50 MiB
+Mar 02 22:21:26 shadow ollama[20305]: llama_new_context_with_model: n_seq_max     = 4
+Mar 02 22:21:26 shadow ollama[20305]: llama_new_context_with_model: n_ctx         = 8192
+Mar 02 22:21:26 shadow ollama[20305]: llama_new_context_with_model: n_ctx_per_seq = 2048
+Mar 02 22:21:26 shadow ollama[20305]: llama_new_context_with_model: n_batch       = 2048
+Mar 02 22:21:26 shadow ollama[20305]: llama_new_context_with_model: n_ubatch      = 512
+Mar 02 22:21:26 shadow ollama[20305]: llama_new_context_with_model: flash_attn    = 0
+Mar 02 22:21:26 shadow ollama[20305]: llama_new_context_with_model: freq_base     = 10000.0
+Mar 02 22:21:26 shadow ollama[20305]: llama_new_context_with_model: freq_scale    = 1
+Mar 02 22:21:26 shadow ollama[20305]: llama_kv_cache_init: kv_size = 8192, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1
+Mar 02 22:21:27 shadow ollama[20305]: llama_kv_cache_init:        CPU KV buffer size =  2560.00 MiB
+Mar 02 22:21:27 shadow ollama[20305]: llama_new_context_with_model: KV self size  = 2560.00 MiB, K (f16): 1280.00 MiB, V (f16): 1280.00 MiB
+Mar 02 22:21:27 shadow ollama[20305]: llama_new_context_with_model:        CPU  output buffer size =     0.82 MiB
+Mar 02 22:21:30 shadow ollama[20305]: llama_new_context_with_model:        CPU compute buffer size =   563.01 MiB
+Mar 02 22:21:30 shadow ollama[20305]: llama_new_context_with_model: graph nodes  = 1225
+Mar 02 22:21:30 shadow ollama[20305]: llama_new_context_with_model: graph splits = 1
+Mar 02 22:21:31 shadow ollama[20305]: time=2025-03-02T22:21:28.251+05:30 level=INFO source=server.go:596 msg="llama runner started in 16.89 seconds"
+Mar 02 22:21:31 shadow ollama[20305]: [GIN] 2025/03/02 - 22:21:31 | 200 | 20.070389813s |       127.0.0.1 | POST     "/api/generate"
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - type  f32:  195 tensors
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - type q4_0:  129 tensors
+Mar 02 22:21:45 shadow ollama[20305]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_vocab: special tokens cache size = 944
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: arch             = phi2
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: vocab type       = BPE
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: n_vocab          = 51200
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: n_merges         = 50000
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: vocab_only       = 1
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: model type       = ?B
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: model ftype      = all F32
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: model params     = 2.78 B
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: general.name     = Phi2
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 02 22:21:46 shadow ollama[20305]: llm_load_print_meta: max token length = 256
+Mar 02 22:21:46 shadow ollama[20305]: llama_model_load: vocab only - skipping tensors
+Mar 02 22:22:59 shadow ollama[20305]: [GIN] 2025/03/02 - 22:22:59 | 200 |         1m15s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 22:32:32 shadow ollama[20305]: [GIN] 2025/03/02 - 22:32:32 | 200 |   16.016881ms |       127.0.0.1 | HEAD     "/"
+Mar 02 22:32:32 shadow ollama[20305]: [GIN] 2025/03/02 - 22:32:32 | 200 |   92.658261ms |       127.0.0.1 | GET      "/api/ps"
+Mar 02 22:32:47 shadow ollama[20305]: [GIN] 2025/03/02 - 22:32:47 | 200 |      45.808µs |       127.0.0.1 | HEAD     "/"
+Mar 02 22:32:47 shadow ollama[20305]: [GIN] 2025/03/02 - 22:32:47 | 200 |  114.639087ms |       127.0.0.1 | GET      "/api/tags"
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.831+05:30 level=INFO source=server.go:97 msg="system memory" total="7.7 GiB" free="4.5 GiB" free_swap="1.4 GiB"
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.855+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.key_length default=80
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.865+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.value_length default=80
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.877+05:30 level=INFO source=server.go:130 msg=offload library=cpu layers.requested=-1 layers.model=33 layers.offload=0 layers.split="" memory.available="[4.5 GiB]" memory.gpu_overhead="0 B" memory.required.full="4.6 GiB" memory.required.partial="0 B" memory.required.kv="2.5 GiB" memory.required.allocations="[4.5 GiB]" memory.weights.total="3.8 GiB" memory.weights.repeating="3.7 GiB" memory.weights.nonrepeating="102.8 MiB" memory.graph.full="548.0 MiB" memory.graph.partial="543.0 MiB"
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.952+05:30 level=INFO source=server.go:380 msg="starting llama server" cmd="/usr/local/bin/ollama runner --model /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 39809"
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.954+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.955+05:30 level=INFO source=server.go:557 msg="waiting for llama runner to start responding"
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.974+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server error"
+Mar 02 22:37:17 shadow ollama[20305]: time=2025-03-02T22:37:17.997+05:30 level=INFO source=runner.go:932 msg="starting go runner"
+Mar 02 22:37:18 shadow ollama[20305]: time=2025-03-02T22:37:18.009+05:30 level=INFO source=runner.go:935 msg=system info="CPU : LLAMAFILE = 1 | CPU : LLAMAFILE = 1 | cgo(gcc)" threads=4
+Mar 02 22:37:18 shadow ollama[20305]: time=2025-03-02T22:37:18.010+05:30 level=INFO source=runner.go:993 msg="Server listening on 127.0.0.1:39809"
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - type  f32:  195 tensors
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - type q4_0:  129 tensors
+Mar 02 22:37:18 shadow ollama[20305]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 22:37:18 shadow ollama[20305]: time=2025-03-02T22:37:18.244+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server loading model"
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_vocab: special tokens cache size = 944
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: arch             = phi2
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: vocab type       = BPE
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_vocab          = 51200
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_merges         = 50000
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: vocab_only       = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_ctx_train      = 2048
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_embd           = 2560
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_layer          = 32
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_head           = 32
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_head_kv        = 32
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_rot            = 32
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_swa            = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_embd_head_k    = 80
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_embd_head_v    = 80
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_gqa            = 1
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_embd_k_gqa     = 2560
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_embd_v_gqa     = 2560
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: f_norm_eps       = 1.0e-05
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: f_norm_rms_eps   = 0.0e+00
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_ff             = 10240
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_expert         = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_expert_used    = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: causal attn      = 1
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: pooling type     = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: rope type        = 2
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: rope scaling     = linear
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: freq_base_train  = 10000.0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: freq_scale_train = 1
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: n_ctx_orig_yarn  = 2048
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: rope_finetuned   = unknown
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: ssm_d_conv       = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: ssm_d_inner      = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: ssm_d_state      = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: ssm_dt_rank      = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: ssm_dt_b_c_rms   = 0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: model type       = 3B
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: model ftype      = Q4_0
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: model params     = 2.78 B
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: general.name     = Phi2
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_print_meta: max token length = 256
+Mar 02 22:37:18 shadow ollama[20305]: llm_load_tensors:          CPU model buffer size =  1526.50 MiB
+Mar 02 22:37:33 shadow ollama[20305]: llama_new_context_with_model: n_seq_max     = 4
+Mar 02 22:37:33 shadow ollama[20305]: llama_new_context_with_model: n_ctx         = 8192
+Mar 02 22:37:33 shadow ollama[20305]: llama_new_context_with_model: n_ctx_per_seq = 2048
+Mar 02 22:37:33 shadow ollama[20305]: llama_new_context_with_model: n_batch       = 2048
+Mar 02 22:37:33 shadow ollama[20305]: llama_new_context_with_model: n_ubatch      = 512
+Mar 02 22:37:33 shadow ollama[20305]: llama_new_context_with_model: flash_attn    = 0
+Mar 02 22:37:33 shadow ollama[20305]: llama_new_context_with_model: freq_base     = 10000.0
+Mar 02 22:37:33 shadow ollama[20305]: llama_new_context_with_model: freq_scale    = 1
+Mar 02 22:37:33 shadow ollama[20305]: llama_kv_cache_init: kv_size = 8192, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1
+Mar 02 22:37:36 shadow ollama[20305]: llama_kv_cache_init:        CPU KV buffer size =  2560.00 MiB
+Mar 02 22:37:36 shadow ollama[20305]: llama_new_context_with_model: KV self size  = 2560.00 MiB, K (f16): 1280.00 MiB, V (f16): 1280.00 MiB
+Mar 02 22:37:37 shadow ollama[20305]: llama_new_context_with_model:        CPU  output buffer size =     0.82 MiB
+Mar 02 22:37:37 shadow ollama[20305]: llama_new_context_with_model:        CPU compute buffer size =   563.01 MiB
+Mar 02 22:37:37 shadow ollama[20305]: llama_new_context_with_model: graph nodes  = 1225
+Mar 02 22:37:37 shadow ollama[20305]: llama_new_context_with_model: graph splits = 1
+Mar 02 22:37:37 shadow ollama[20305]: time=2025-03-02T22:37:36.615+05:30 level=INFO source=server.go:596 msg="llama runner started in 18.66 seconds"
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - type  f32:  195 tensors
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - type q4_0:  129 tensors
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_vocab: special tokens cache size = 944
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: arch             = phi2
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: vocab type       = BPE
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: n_vocab          = 51200
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: n_merges         = 50000
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: vocab_only       = 1
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: model type       = ?B
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: model ftype      = all F32
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: model params     = 2.78 B
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: general.name     = Phi2
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 02 22:37:37 shadow ollama[20305]: llm_load_print_meta: max token length = 256
+Mar 02 22:37:37 shadow ollama[20305]: llama_model_load: vocab only - skipping tensors
+Mar 02 22:37:57 shadow ollama[20305]: [GIN] 2025/03/02 - 22:37:57 | 200 |      25.335µs |       127.0.0.1 | HEAD     "/"
+Mar 02 22:37:57 shadow ollama[20305]: [GIN] 2025/03/02 - 22:37:57 | 200 |      32.294µs |       127.0.0.1 | GET      "/api/ps"
+Mar 02 22:38:34 shadow ollama[20305]: [GIN] 2025/03/02 - 22:38:34 | 200 |         1m17s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 22:39:32 shadow ollama[20305]: [GIN] 2025/03/02 - 22:39:32 | 200 | 12.527645315s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 22:41:46 shadow ollama[20305]: [GIN] 2025/03/02 - 22:41:46 | 200 |          1m7s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 22:50:09 shadow ollama[20305]: [GIN] 2025/03/02 - 22:50:09 | 200 |          6m7s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 22:51:39 shadow ollama[20305]: [GIN] 2025/03/02 - 22:51:39 | 200 |      83.902µs |       127.0.0.1 | HEAD     "/"
+Mar 02 22:51:42 shadow ollama[20305]: time=2025-03-02T22:51:42.076+05:30 level=INFO source=download.go:176 msg="downloading dd0c6f2ea876 in 16 100 MB part(s)"
+Mar 02 22:58:52 shadow ollama[20305]: [GIN] 2025/03/02 - 22:58:52 | 200 |      27.097µs |       127.0.0.1 | HEAD     "/"
+Mar 02 22:58:52 shadow ollama[20305]: [GIN] 2025/03/02 - 22:58:52 | 200 |      12.436µs |       127.0.0.1 | GET      "/api/ps"
+Mar 02 22:58:55 shadow ollama[20305]: [GIN] 2025/03/02 - 22:58:55 | 200 |      21.064µs |       127.0.0.1 | HEAD     "/"
+Mar 02 22:58:55 shadow ollama[20305]: [GIN] 2025/03/02 - 22:58:55 | 200 |    45.53187ms |       127.0.0.1 | GET      "/api/tags"
+Mar 02 23:09:01 shadow ollama[20305]: time=2025-03-02T23:09:01.015+05:30 level=INFO source=download.go:176 msg="downloading 097a36493f71 in 1 8.4 KB part(s)"
+Mar 02 23:09:02 shadow ollama[20305]: time=2025-03-02T23:09:02.592+05:30 level=INFO source=download.go:176 msg="downloading 9be8862a3637 in 1 142 B part(s)"
+Mar 02 23:09:04 shadow ollama[20305]: time=2025-03-02T23:09:04.184+05:30 level=INFO source=download.go:176 msg="downloading 48d9a8140749 in 1 121 B part(s)"
+Mar 02 23:09:05 shadow ollama[20305]: time=2025-03-02T23:09:05.747+05:30 level=INFO source=download.go:176 msg="downloading ea4a24c038f5 in 1 409 B part(s)"
+Mar 02 23:09:13 shadow ollama[20305]: [GIN] 2025/03/02 - 23:09:13 | 200 |        17m34s |       127.0.0.1 | POST     "/api/pull"
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.620+05:30 level=INFO source=server.go:97 msg="system memory" total="7.7 GiB" free="4.2 GiB" free_swap="911.1 MiB"
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.621+05:30 level=INFO source=server.go:130 msg=offload library=cpu layers.requested=-1 layers.model=19 layers.offload=0 layers.split="" memory.available="[4.2 GiB]" memory.gpu_overhead="0 B" memory.required.full="2.1 GiB" memory.required.partial="0 B" memory.required.kv="144.0 MiB" memory.required.allocations="[2.1 GiB]" memory.weights.total="1.2 GiB" memory.weights.repeating="797.2 MiB" memory.weights.nonrepeating="410.2 MiB" memory.graph.full="504.0 MiB" memory.graph.partial="914.2 MiB"
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.621+05:30 level=INFO source=server.go:380 msg="starting llama server" cmd="/usr/local/bin/ollama runner --model /usr/share/ollama/.ollama/models/blobs/sha256-dd0c6f2ea876e4c433325df3398386f24e00d321abf6cec197c1bc1fcf1e0025 --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 34057"
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.621+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.621+05:30 level=INFO source=server.go:557 msg="waiting for llama runner to start responding"
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.621+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server error"
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.658+05:30 level=INFO source=runner.go:932 msg="starting go runner"
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.659+05:30 level=INFO source=runner.go:935 msg=system info="CPU : LLAMAFILE = 1 | CPU : LLAMAFILE = 1 | cgo(gcc)" threads=4
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.696+05:30 level=INFO source=runner.go:993 msg="Server listening on 127.0.0.1:34057"
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: loaded meta data with 27 key-value pairs and 164 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-dd0c6f2ea876e4c433325df3398386f24e00d321abf6cec197c1bc1fcf1e0025 (version GGUF V3 (latest))
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   0:                       general.architecture str              = gemma
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   1:                               general.name str              = codegemma-1.1-2b
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   2:                       gemma.context_length u32              = 8192
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   3:                     gemma.embedding_length u32              = 2048
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   4:                          gemma.block_count u32              = 18
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   5:                  gemma.feed_forward_length u32              = 16384
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   6:                 gemma.attention.head_count u32              = 8
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   7:              gemma.attention.head_count_kv u32              = 1
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   8:     gemma.attention.layer_norm_rms_epsilon f32              = 0.000001
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv   9:                 gemma.attention.key_length u32              = 256
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv  10:               gemma.attention.value_length u32              = 256
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv  11:                          general.file_type u32              = 2
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+Mar 02 23:10:03 shadow ollama[20305]: llama_model_loader: - kv  13:                         tokenizer.ggml.pre str              = default
+Mar 02 23:10:03 shadow ollama[20305]: time=2025-03-02T23:10:03.873+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server loading model"
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,256000]  = ["<pad>", "<eos>", "<bos>", "<unk>", ...
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,256000]  = [0.000000, 0.000000, 0.000000, 0.0000...
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,256000]  = [3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 2
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 1
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 0
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  22:             tokenizer.ggml.prefix_token_id u32              = 67
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  23:             tokenizer.ggml.suffix_token_id u32              = 69
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  24:             tokenizer.ggml.middle_token_id u32              = 68
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  25:                tokenizer.ggml.eot_token_id u32              = 107
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - kv  26:               general.quantization_version u32              = 2
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - type  f32:   37 tensors
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - type q4_0:  126 tensors
+Mar 02 23:10:04 shadow ollama[20305]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_vocab: control-looking token:    107 '<end_of_turn>' was not control-type; this is probably a bug in the model. its type will be overridden
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_vocab: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_vocab: special tokens cache size = 5
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_vocab: token to piece cache size = 1.6014 MB
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: arch             = gemma
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: vocab type       = SPM
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_vocab          = 256000
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_merges         = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: vocab_only       = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_ctx_train      = 8192
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_embd           = 2048
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_layer          = 18
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_head           = 8
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_head_kv        = 1
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_rot            = 256
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_swa            = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_embd_head_k    = 256
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_embd_head_v    = 256
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_gqa            = 8
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_embd_k_gqa     = 256
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_embd_v_gqa     = 256
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: f_norm_eps       = 0.0e+00
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: f_norm_rms_eps   = 1.0e-06
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_ff             = 16384
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_expert         = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_expert_used    = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: causal attn      = 1
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: pooling type     = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: rope type        = 2
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: rope scaling     = linear
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: freq_base_train  = 10000.0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: freq_scale_train = 1
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: n_ctx_orig_yarn  = 8192
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: rope_finetuned   = unknown
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: ssm_d_conv       = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: ssm_d_inner      = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: ssm_d_state      = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: ssm_dt_rank      = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: ssm_dt_b_c_rms   = 0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: model type       = 2B
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: model ftype      = Q4_0
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: model params     = 2.51 B
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: model size       = 1.44 GiB (4.93 BPW)
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: general.name     = codegemma-1.1-2b
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: BOS token        = 2 '<bos>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: EOS token        = 1 '<eos>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: EOT token        = 107 '<end_of_turn>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: UNK token        = 0 '<pad>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: PAD token        = 0 '<pad>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: LF token         = 227 '<0x0A>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: FIM PRE token    = 67 '<|fim_prefix|>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: FIM SUF token    = 69 '<|fim_suffix|>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: FIM MID token    = 68 '<|fim_middle|>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: EOG token        = 1 '<eos>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: EOG token        = 107 '<end_of_turn>'
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_print_meta: max token length = 93
+Mar 02 23:10:04 shadow ollama[20305]: llm_load_tensors:          CPU model buffer size =  1473.57 MiB
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: n_seq_max     = 4
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: n_ctx         = 8192
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: n_ctx_per_seq = 2048
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: n_batch       = 2048
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: n_ubatch      = 512
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: flash_attn    = 0
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: freq_base     = 10000.0
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: freq_scale    = 1
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: n_ctx_per_seq (2048) < n_ctx_train (8192) -- the full capacity of the model will not be utilized
+Mar 02 23:10:05 shadow ollama[20305]: llama_kv_cache_init: kv_size = 8192, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 18, can_shift = 1
+Mar 02 23:10:05 shadow ollama[20305]: llama_kv_cache_init:        CPU KV buffer size =   144.00 MiB
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: KV self size  =  144.00 MiB, K (f16):   72.00 MiB, V (f16):   72.00 MiB
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model:        CPU  output buffer size =     3.94 MiB
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model:        CPU compute buffer size =   508.00 MiB
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: graph nodes  = 601
+Mar 02 23:10:05 shadow ollama[20305]: llama_new_context_with_model: graph splits = 1
+Mar 02 23:10:05 shadow ollama[20305]: time=2025-03-02T23:10:05.880+05:30 level=INFO source=server.go:596 msg="llama runner started in 2.26 seconds"
+Mar 02 23:10:10 shadow ollama[20305]: [GIN] 2025/03/02 - 23:10:10 | 200 |      28.334µs |       127.0.0.1 | HEAD     "/"
+Mar 02 23:10:10 shadow ollama[20305]: [GIN] 2025/03/02 - 23:10:10 | 200 |     558.939µs |       127.0.0.1 | GET      "/api/tags"
+Mar 02 23:10:14 shadow ollama[20305]: [GIN] 2025/03/02 - 23:10:14 | 200 |       27.61µs |       127.0.0.1 | HEAD     "/"
+Mar 02 23:10:14 shadow ollama[20305]: [GIN] 2025/03/02 - 23:10:14 | 200 |      26.824µs |       127.0.0.1 | GET      "/api/ps"
+Mar 02 23:14:07 shadow ollama[20305]: [GIN] 2025/03/02 - 23:14:07 | 200 |      45.102µs |       127.0.0.1 | HEAD     "/"
+Mar 02 23:14:07 shadow ollama[20305]: [GIN] 2025/03/02 - 23:14:07 | 200 |      52.496µs |       127.0.0.1 | GET      "/api/ps"
+Mar 02 23:21:54 shadow ollama[20305]: [GIN] 2025/03/02 - 23:21:54 | 500 |        11m51s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 23:22:03 shadow ollama[20305]: [GIN] 2025/03/02 - 23:22:03 | 200 |      40.743µs |       127.0.0.1 | HEAD     "/"
+Mar 02 23:22:03 shadow ollama[20305]: [GIN] 2025/03/02 - 23:22:03 | 200 |    1.124787ms |       127.0.0.1 | GET      "/api/tags"
+Mar 02 23:22:11 shadow ollama[20305]: [GIN] 2025/03/02 - 23:22:11 | 200 |      28.919µs |       127.0.0.1 | HEAD     "/"
+Mar 02 23:22:11 shadow ollama[20305]: [GIN] 2025/03/02 - 23:22:11 | 200 |  107.316165ms |       127.0.0.1 | POST     "/api/show"
+Mar 02 23:22:11 shadow ollama[20305]: [GIN] 2025/03/02 - 23:22:11 | 200 |   95.292632ms |       127.0.0.1 | POST     "/api/generate"
+Mar 02 23:22:19 shadow ollama[20305]: [GIN] 2025/03/02 - 23:22:19 | 200 |  2.885307901s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: loaded meta data with 27 key-value pairs and 164 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-dd0c6f2ea876e4c433325df3398386f24e00d321abf6cec197c1bc1fcf1e0025 (version GGUF V3 (latest))
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   0:                       general.architecture str              = gemma
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   1:                               general.name str              = codegemma-1.1-2b
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   2:                       gemma.context_length u32              = 8192
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   3:                     gemma.embedding_length u32              = 2048
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   4:                          gemma.block_count u32              = 18
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   5:                  gemma.feed_forward_length u32              = 16384
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   6:                 gemma.attention.head_count u32              = 8
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   7:              gemma.attention.head_count_kv u32              = 1
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   8:     gemma.attention.layer_norm_rms_epsilon f32              = 0.000001
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv   9:                 gemma.attention.key_length u32              = 256
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv  10:               gemma.attention.value_length u32              = 256
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv  11:                          general.file_type u32              = 2
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv  13:                         tokenizer.ggml.pre str              = default
+Mar 02 23:22:41 shadow ollama[20305]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,256000]  = ["<pad>", "<eos>", "<bos>", "<unk>", ...
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,256000]  = [0.000000, 0.000000, 0.000000, 0.0000...
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,256000]  = [3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 2
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 1
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 0
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  22:             tokenizer.ggml.prefix_token_id u32              = 67
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  23:             tokenizer.ggml.suffix_token_id u32              = 69
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  24:             tokenizer.ggml.middle_token_id u32              = 68
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  25:                tokenizer.ggml.eot_token_id u32              = 107
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - kv  26:               general.quantization_version u32              = 2
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - type  f32:   37 tensors
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - type q4_0:  126 tensors
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_loader: - type q6_K:    1 tensors
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_vocab: control-looking token:    107 '<end_of_turn>' was not control-type; this is probably a bug in the model. its type will be overridden
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_vocab: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_vocab: special tokens cache size = 5
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_vocab: token to piece cache size = 1.6014 MB
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: arch             = gemma
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: vocab type       = SPM
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: n_vocab          = 256000
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: n_merges         = 0
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: vocab_only       = 1
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: model type       = ?B
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: model ftype      = all F32
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: model params     = 2.51 B
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: model size       = 1.44 GiB (4.93 BPW)
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: general.name     = codegemma-1.1-2b
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: BOS token        = 2 '<bos>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: EOS token        = 1 '<eos>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: EOT token        = 107 '<end_of_turn>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: UNK token        = 0 '<pad>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: PAD token        = 0 '<pad>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: LF token         = 227 '<0x0A>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: FIM PRE token    = 67 '<|fim_prefix|>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: FIM SUF token    = 69 '<|fim_suffix|>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: FIM MID token    = 68 '<|fim_middle|>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: EOG token        = 1 '<eos>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: EOG token        = 107 '<end_of_turn>'
+Mar 02 23:22:42 shadow ollama[20305]: llm_load_print_meta: max token length = 93
+Mar 02 23:22:42 shadow ollama[20305]: llama_model_load: vocab only - skipping tensors
+Mar 02 23:23:36 shadow ollama[20305]: [GIN] 2025/03/02 - 23:23:36 | 200 |  55.14667447s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 23:28:08 shadow ollama[20305]: [GIN] 2025/03/02 - 23:28:08 | 200 |          4m7s |       127.0.0.1 | POST     "/api/chat"
+Mar 02 23:28:29 shadow ollama[20305]: [GIN] 2025/03/02 - 23:28:29 | 200 |      69.327µs |       127.0.0.1 | HEAD     "/"
+Mar 02 23:28:29 shadow ollama[20305]: [GIN] 2025/03/02 - 23:28:29 | 200 |      74.394µs |       127.0.0.1 | GET      "/api/ps"
+Mar 02 23:28:55 shadow ollama[20305]: [GIN] 2025/03/02 - 23:28:55 | 200 |      36.458µs |       127.0.0.1 | HEAD     "/"
+Mar 02 23:28:55 shadow ollama[20305]: [GIN] 2025/03/02 - 23:28:55 | 200 |      27.403µs |       127.0.0.1 | GET      "/api/ps"
+Mar 02 23:29:05 shadow ollama[20305]: [GIN] 2025/03/02 - 23:29:05 | 200 |       36.72µs |       127.0.0.1 | HEAD     "/"
+Mar 02 23:29:05 shadow ollama[20305]: [GIN] 2025/03/02 - 23:29:05 | 200 |     818.384µs |       127.0.0.1 | POST     "/api/generate"
+-- Reboot --
+Mar 05 22:58:33 shadow systemd[1]: Started Ollama Service.
+Mar 05 22:58:38 shadow ollama[2105]: 2025/03/05 22:58:38 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 05 22:58:38 shadow ollama[2105]: time=2025-03-05T22:58:38.863+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 05 22:58:38 shadow ollama[2105]: time=2025-03-05T22:58:38.865+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 05 22:58:38 shadow ollama[2105]: time=2025-03-05T22:58:38.866+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 05 22:58:38 shadow ollama[2105]: time=2025-03-05T22:58:38.866+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 05 22:58:39 shadow ollama[2105]: time=2025-03-05T22:58:39.407+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 05 22:58:39 shadow ollama[2105]: time=2025-03-05T22:58:39.408+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="6.9 GiB"
+-- Reboot --
+Mar 05 23:16:23 shadow systemd[1]: Started Ollama Service.
+Mar 05 23:16:27 shadow ollama[2111]: 2025/03/05 23:16:26 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 05 23:16:27 shadow ollama[2111]: time=2025-03-05T23:16:26.948+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 05 23:16:27 shadow ollama[2111]: time=2025-03-05T23:16:26.949+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 05 23:16:27 shadow ollama[2111]: time=2025-03-05T23:16:26.951+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 05 23:16:27 shadow ollama[2111]: time=2025-03-05T23:16:27.391+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 05 23:16:28 shadow ollama[2111]: time=2025-03-05T23:16:28.230+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 05 23:16:28 shadow ollama[2111]: time=2025-03-05T23:16:28.231+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="6.9 GiB"
+-- Reboot --
+Mar 06 16:26:01 shadow systemd[1]: Started Ollama Service.
+-- Reboot --
+Mar 06 16:37:38 shadow systemd[1]: Started Ollama Service.
+Mar 06 16:37:42 shadow ollama[656]: 2025/03/06 16:37:42 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 06 16:37:42 shadow ollama[656]: time=2025-03-06T16:37:42.991+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 06 16:37:42 shadow ollama[656]: time=2025-03-06T16:37:42.991+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 06 16:37:42 shadow ollama[656]: time=2025-03-06T16:37:42.992+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 06 16:37:43 shadow ollama[656]: time=2025-03-06T16:37:43.025+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 06 16:37:43 shadow ollama[656]: time=2025-03-06T16:37:43.559+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 06 16:37:43 shadow ollama[656]: time=2025-03-06T16:37:43.559+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="7.3 GiB"
+Mar 06 17:38:03 shadow systemd[1]: Stopping Ollama Service...
+Mar 06 17:38:03 shadow systemd[1]: ollama.service: Succeeded.
+Mar 06 17:38:03 shadow systemd[1]: Stopped Ollama Service.
+-- Reboot --
+Mar 06 17:39:47 shadow systemd[1]: Started Ollama Service.
+Mar 06 17:39:56 shadow ollama[1206]: 2025/03/06 17:39:56 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 06 17:39:57 shadow ollama[1206]: time=2025-03-06T17:39:57.014+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 06 17:39:57 shadow ollama[1206]: time=2025-03-06T17:39:57.016+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 06 17:39:57 shadow ollama[1206]: time=2025-03-06T17:39:57.017+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 06 17:39:57 shadow ollama[1206]: time=2025-03-06T17:39:57.073+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 06 17:39:57 shadow ollama[1206]: time=2025-03-06T17:39:57.845+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 06 17:39:57 shadow ollama[1206]: time=2025-03-06T17:39:57.845+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="6.7 GiB"
+Mar 06 17:44:31 shadow systemd[1]: Stopping Ollama Service...
+Mar 06 17:44:31 shadow systemd[1]: ollama.service: Succeeded.
+Mar 06 17:44:31 shadow systemd[1]: Stopped Ollama Service.
+-- Reboot --
+Mar 06 17:46:20 shadow systemd[1]: Started Ollama Service.
+Mar 06 17:46:29 shadow ollama[1228]: 2025/03/06 17:46:29 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 06 17:46:29 shadow ollama[1228]: time=2025-03-06T17:46:29.741+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 06 17:46:29 shadow ollama[1228]: time=2025-03-06T17:46:29.741+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 06 17:46:29 shadow ollama[1228]: time=2025-03-06T17:46:29.742+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 06 17:46:29 shadow ollama[1228]: time=2025-03-06T17:46:29.742+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 06 17:46:29 shadow ollama[1228]: time=2025-03-06T17:46:29.951+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 06 17:46:29 shadow ollama[1228]: time=2025-03-06T17:46:29.951+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="6.7 GiB"
+-- Reboot --
+Mar 06 18:27:44 shadow systemd[1]: Started Ollama Service.
+Mar 06 18:27:52 shadow ollama[1196]: 2025/03/06 18:27:52 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 06 18:27:52 shadow ollama[1196]: time=2025-03-06T18:27:52.790+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 06 18:27:52 shadow ollama[1196]: time=2025-03-06T18:27:52.791+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 06 18:27:52 shadow ollama[1196]: time=2025-03-06T18:27:52.792+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 06 18:27:52 shadow ollama[1196]: time=2025-03-06T18:27:52.792+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 06 18:27:54 shadow ollama[1196]: time=2025-03-06T18:27:54.633+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 06 18:27:54 shadow ollama[1196]: time=2025-03-06T18:27:54.633+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="6.8 GiB"
+Mar 06 19:05:21 shadow systemd[1]: Stopping Ollama Service...
+Mar 06 19:05:21 shadow systemd[1]: ollama.service: Succeeded.
+Mar 06 19:05:21 shadow systemd[1]: Stopped Ollama Service.
+-- Reboot --
+Mar 06 19:07:06 shadow systemd[1]: Started Ollama Service.
+Mar 06 19:07:18 shadow ollama[1323]: 2025/03/06 19:07:18 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 06 19:07:18 shadow ollama[1323]: time=2025-03-06T19:07:18.582+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 06 19:07:18 shadow ollama[1323]: time=2025-03-06T19:07:18.583+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 06 19:07:18 shadow ollama[1323]: time=2025-03-06T19:07:18.605+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 06 19:07:18 shadow ollama[1323]: time=2025-03-06T19:07:18.607+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 06 19:07:19 shadow ollama[1323]: time=2025-03-06T19:07:19.352+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 06 19:07:19 shadow ollama[1323]: time=2025-03-06T19:07:19.352+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="6.7 GiB"
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.420+05:30 level=INFO source=server.go:97 msg="system memory" total="7.7 GiB" free="3.2 GiB" free_swap="2.0 GiB"
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.420+05:30 level=INFO source=server.go:130 msg=offload library=cpu layers.requested=-1 layers.model=19 layers.offload=0 layers.split="" memory.available="[3.2 GiB]" memory.gpu_overhead="0 B" memory.required.full="2.1 GiB" memory.required.partial="0 B" memory.required.kv="144.0 MiB" memory.required.allocations="[2.1 GiB]" memory.weights.total="1.2 GiB" memory.weights.repeating="797.2 MiB" memory.weights.nonrepeating="410.2 MiB" memory.graph.full="504.0 MiB" memory.graph.partial="914.2 MiB"
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.467+05:30 level=INFO source=server.go:380 msg="starting llama server" cmd="/usr/local/bin/ollama runner --model /usr/share/ollama/.ollama/models/blobs/sha256-dd0c6f2ea876e4c433325df3398386f24e00d321abf6cec197c1bc1fcf1e0025 --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 44979"
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.470+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.470+05:30 level=INFO source=server.go:557 msg="waiting for llama runner to start responding"
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.527+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server error"
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.531+05:30 level=INFO source=runner.go:932 msg="starting go runner"
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.544+05:30 level=INFO source=runner.go:935 msg=system info="CPU : LLAMAFILE = 1 | CPU : LLAMAFILE = 1 | cgo(gcc)" threads=4
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.545+05:30 level=INFO source=runner.go:993 msg="Server listening on 127.0.0.1:44979"
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: loaded meta data with 27 key-value pairs and 164 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-dd0c6f2ea876e4c433325df3398386f24e00d321abf6cec197c1bc1fcf1e0025 (version GGUF V3 (latest))
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   0:                       general.architecture str              = gemma
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   1:                               general.name str              = codegemma-1.1-2b
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   2:                       gemma.context_length u32              = 8192
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   3:                     gemma.embedding_length u32              = 2048
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   4:                          gemma.block_count u32              = 18
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   5:                  gemma.feed_forward_length u32              = 16384
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   6:                 gemma.attention.head_count u32              = 8
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   7:              gemma.attention.head_count_kv u32              = 1
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   8:     gemma.attention.layer_norm_rms_epsilon f32              = 0.000001
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv   9:                 gemma.attention.key_length u32              = 256
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  10:               gemma.attention.value_length u32              = 256
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  11:                          general.file_type u32              = 2
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  13:                         tokenizer.ggml.pre str              = default
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,256000]  = ["<pad>", "<eos>", "<bos>", "<unk>", ...
+Mar 06 20:41:54 shadow ollama[1323]: time=2025-03-06T20:41:54.779+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server loading model"
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,256000]  = [0.000000, 0.000000, 0.000000, 0.0000...
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,256000]  = [3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 2
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 1
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 0
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  22:             tokenizer.ggml.prefix_token_id u32              = 67
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  23:             tokenizer.ggml.suffix_token_id u32              = 69
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  24:             tokenizer.ggml.middle_token_id u32              = 68
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  25:                tokenizer.ggml.eot_token_id u32              = 107
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - kv  26:               general.quantization_version u32              = 2
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - type  f32:   37 tensors
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - type q4_0:  126 tensors
+Mar 06 20:41:54 shadow ollama[1323]: llama_model_loader: - type q6_K:    1 tensors
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_vocab: control-looking token:    107 '<end_of_turn>' was not control-type; this is probably a bug in the model. its type will be overridden
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_vocab: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_vocab: special tokens cache size = 5
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_vocab: token to piece cache size = 1.6014 MB
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: arch             = gemma
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: vocab type       = SPM
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_vocab          = 256000
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_merges         = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: vocab_only       = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_ctx_train      = 8192
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_embd           = 2048
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_layer          = 18
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_head           = 8
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_head_kv        = 1
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_rot            = 256
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_swa            = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_embd_head_k    = 256
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_embd_head_v    = 256
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_gqa            = 8
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_embd_k_gqa     = 256
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_embd_v_gqa     = 256
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: f_norm_eps       = 0.0e+00
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: f_norm_rms_eps   = 1.0e-06
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_ff             = 16384
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_expert         = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_expert_used    = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: causal attn      = 1
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: pooling type     = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: rope type        = 2
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: rope scaling     = linear
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: freq_base_train  = 10000.0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: freq_scale_train = 1
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: n_ctx_orig_yarn  = 8192
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: rope_finetuned   = unknown
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: ssm_d_conv       = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: ssm_d_inner      = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: ssm_d_state      = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: ssm_dt_rank      = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: ssm_dt_b_c_rms   = 0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: model type       = 2B
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: model ftype      = Q4_0
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: model params     = 2.51 B
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: model size       = 1.44 GiB (4.93 BPW)
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: general.name     = codegemma-1.1-2b
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: BOS token        = 2 '<bos>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: EOS token        = 1 '<eos>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: EOT token        = 107 '<end_of_turn>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: UNK token        = 0 '<pad>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: PAD token        = 0 '<pad>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: LF token         = 227 '<0x0A>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: FIM PRE token    = 67 '<|fim_prefix|>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: FIM SUF token    = 69 '<|fim_suffix|>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: FIM MID token    = 68 '<|fim_middle|>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: EOG token        = 1 '<eos>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: EOG token        = 107 '<end_of_turn>'
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_print_meta: max token length = 93
+Mar 06 20:41:55 shadow ollama[1323]: llm_load_tensors:          CPU model buffer size =  1473.57 MiB
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: n_seq_max     = 4
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: n_ctx         = 8192
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: n_ctx_per_seq = 2048
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: n_batch       = 2048
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: n_ubatch      = 512
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: flash_attn    = 0
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: freq_base     = 10000.0
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: freq_scale    = 1
+Mar 06 20:42:11 shadow ollama[1323]: llama_new_context_with_model: n_ctx_per_seq (2048) < n_ctx_train (8192) -- the full capacity of the model will not be utilized
+Mar 06 20:42:11 shadow ollama[1323]: llama_kv_cache_init: kv_size = 8192, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 18, can_shift = 1
+Mar 06 20:42:12 shadow ollama[1323]: llama_kv_cache_init:        CPU KV buffer size =   144.00 MiB
+Mar 06 20:42:12 shadow ollama[1323]: llama_new_context_with_model: KV self size  =  144.00 MiB, K (f16):   72.00 MiB, V (f16):   72.00 MiB
+Mar 06 20:42:12 shadow ollama[1323]: llama_new_context_with_model:        CPU  output buffer size =     3.94 MiB
+Mar 06 20:42:12 shadow ollama[1323]: llama_new_context_with_model:        CPU compute buffer size =   508.00 MiB
+Mar 06 20:42:12 shadow ollama[1323]: llama_new_context_with_model: graph nodes  = 601
+Mar 06 20:42:12 shadow ollama[1323]: llama_new_context_with_model: graph splits = 1
+Mar 06 20:42:12 shadow ollama[1323]: time=2025-03-06T20:42:12.131+05:30 level=INFO source=server.go:596 msg="llama runner started in 17.66 seconds"
+Mar 06 20:49:23 shadow ollama[1323]: [GIN] 2025/03/06 - 20:49:23 | 200 |         7m29s |       127.0.0.1 | POST     "/api/chat"
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.172+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.key_length default=80
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.179+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.value_length default=80
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.333+05:30 level=INFO source=server.go:97 msg="system memory" total="7.7 GiB" free="3.6 GiB" free_swap="2.0 GiB"
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.333+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.key_length default=80
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.333+05:30 level=WARN source=ggml.go:132 msg="key not found" key=phi2.attention.value_length default=80
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.333+05:30 level=INFO source=server.go:130 msg=offload library=cpu layers.requested=-1 layers.model=33 layers.offload=0 layers.split="" memory.available="[3.6 GiB]" memory.gpu_overhead="0 B" memory.required.full="4.6 GiB" memory.required.partial="0 B" memory.required.kv="2.5 GiB" memory.required.allocations="[3.5 GiB]" memory.weights.total="3.8 GiB" memory.weights.repeating="3.7 GiB" memory.weights.nonrepeating="102.8 MiB" memory.graph.full="548.0 MiB" memory.graph.partial="543.0 MiB"
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.333+05:30 level=INFO source=server.go:380 msg="starting llama server" cmd="/usr/local/bin/ollama runner --model /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 40207"
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.333+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.334+05:30 level=INFO source=server.go:557 msg="waiting for llama runner to start responding"
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.334+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server error"
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.367+05:30 level=INFO source=runner.go:932 msg="starting go runner"
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.369+05:30 level=INFO source=runner.go:935 msg=system info="CPU : LLAMAFILE = 1 | CPU : LLAMAFILE = 1 | cgo(gcc)" threads=4
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.369+05:30 level=INFO source=runner.go:993 msg="Server listening on 127.0.0.1:40207"
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - type  f32:  195 tensors
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - type q4_0:  129 tensors
+Mar 06 20:50:28 shadow ollama[1323]: llama_model_loader: - type q6_K:    1 tensors
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_vocab: special tokens cache size = 944
+Mar 06 20:50:28 shadow ollama[1323]: time=2025-03-06T20:50:28.584+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server loading model"
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: arch             = phi2
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: vocab type       = BPE
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_vocab          = 51200
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_merges         = 50000
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: vocab_only       = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_ctx_train      = 2048
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_embd           = 2560
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_layer          = 32
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_head           = 32
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_head_kv        = 32
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_rot            = 32
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_swa            = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_embd_head_k    = 80
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_embd_head_v    = 80
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_gqa            = 1
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_embd_k_gqa     = 2560
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_embd_v_gqa     = 2560
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: f_norm_eps       = 1.0e-05
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: f_norm_rms_eps   = 0.0e+00
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_ff             = 10240
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_expert         = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_expert_used    = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: causal attn      = 1
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: pooling type     = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: rope type        = 2
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: rope scaling     = linear
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: freq_base_train  = 10000.0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: freq_scale_train = 1
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: n_ctx_orig_yarn  = 2048
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: rope_finetuned   = unknown
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: ssm_d_conv       = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: ssm_d_inner      = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: ssm_d_state      = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: ssm_dt_rank      = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: ssm_dt_b_c_rms   = 0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: model type       = 3B
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: model ftype      = Q4_0
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: model params     = 2.78 B
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: general.name     = Phi2
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_print_meta: max token length = 256
+Mar 06 20:50:28 shadow ollama[1323]: llm_load_tensors:          CPU model buffer size =  1526.50 MiB
+Mar 06 20:50:44 shadow ollama[1323]: llama_new_context_with_model: n_seq_max     = 4
+Mar 06 20:50:44 shadow ollama[1323]: llama_new_context_with_model: n_ctx         = 8192
+Mar 06 20:50:44 shadow ollama[1323]: llama_new_context_with_model: n_ctx_per_seq = 2048
+Mar 06 20:50:44 shadow ollama[1323]: llama_new_context_with_model: n_batch       = 2048
+Mar 06 20:50:44 shadow ollama[1323]: llama_new_context_with_model: n_ubatch      = 512
+Mar 06 20:50:44 shadow ollama[1323]: llama_new_context_with_model: flash_attn    = 0
+Mar 06 20:50:44 shadow ollama[1323]: llama_new_context_with_model: freq_base     = 10000.0
+Mar 06 20:50:44 shadow ollama[1323]: llama_new_context_with_model: freq_scale    = 1
+Mar 06 20:50:44 shadow ollama[1323]: llama_kv_cache_init: kv_size = 8192, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1
+Mar 06 20:50:53 shadow ollama[1323]: time=2025-03-06T20:50:47.742+05:30 level=INFO source=server.go:591 msg="waiting for server to become available" status="llm server not responding"
+Mar 06 20:50:57 shadow ollama[1323]: llama_kv_cache_init:        CPU KV buffer size =  2560.00 MiB
+Mar 06 20:50:57 shadow ollama[1323]: llama_new_context_with_model: KV self size  = 2560.00 MiB, K (f16): 1280.00 MiB, V (f16): 1280.00 MiB
+Mar 06 20:50:57 shadow ollama[1323]: llama_new_context_with_model:        CPU  output buffer size =     0.82 MiB
+Mar 06 20:50:57 shadow ollama[1323]: llama_new_context_with_model:        CPU compute buffer size =   563.01 MiB
+Mar 06 20:50:57 shadow ollama[1323]: llama_new_context_with_model: graph nodes  = 1225
+Mar 06 20:50:57 shadow ollama[1323]: llama_new_context_with_model: graph splits = 1
+Mar 06 20:50:59 shadow ollama[1323]: time=2025-03-06T20:50:59.682+05:30 level=INFO source=server.go:596 msg="llama runner started in 31.35 seconds"
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   0:                       general.architecture str              = phi2
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   1:                               general.name str              = Phi2
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  10:                          general.file_type u32              = 2
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - type  f32:  195 tensors
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - type q4_0:  129 tensors
+Mar 06 20:51:04 shadow ollama[1323]: llama_model_loader: - type q6_K:    1 tensors
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_vocab: missing or unrecognized pre-tokenizer type, using: 'default'
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_vocab: special tokens cache size = 944
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_vocab: token to piece cache size = 0.3151 MB
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: format           = GGUF V3 (latest)
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: arch             = phi2
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: vocab type       = BPE
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: n_vocab          = 51200
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: n_merges         = 50000
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: vocab_only       = 1
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: model type       = ?B
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: model ftype      = all F32
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: model params     = 2.78 B
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW)
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: general.name     = Phi2
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: EOT token        = 50256 '<|endoftext|>'
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: LF token         = 128 'Ä'
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: EOG token        = 50256 '<|endoftext|>'
+Mar 06 20:51:05 shadow ollama[1323]: llm_load_print_meta: max token length = 256
+Mar 06 20:51:05 shadow ollama[1323]: llama_model_load: vocab only - skipping tensors
+Mar 06 20:52:13 shadow ollama[1323]: [GIN] 2025/03/06 - 20:52:13 | 200 |  108.862102ms |       127.0.0.1 | HEAD     "/"
+Mar 06 20:52:14 shadow ollama[1323]: [GIN] 2025/03/06 - 20:52:14 | 200 |   20.741833ms |       127.0.0.1 | GET      "/api/ps"
+Mar 06 20:53:10 shadow ollama[1323]: [GIN] 2025/03/06 - 20:53:10 | 200 |      36.865µs |       127.0.0.1 | HEAD     "/"
+Mar 06 20:53:10 shadow ollama[1323]: [GIN] 2025/03/06 - 20:53:10 | 200 |      46.726µs |       127.0.0.1 | GET      "/api/ps"
+Mar 06 20:53:51 shadow ollama[1323]: [GIN] 2025/03/06 - 20:53:51 | 500 |         3m23s |       127.0.0.1 | POST     "/api/chat"
+-- Reboot --
+Mar 10 21:33:51 shadow systemd[1]: Started Ollama Service.
+Mar 10 21:34:09 shadow ollama[1272]: 2025/03/10 21:34:09 routes.go:1205: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 10 21:34:09 shadow ollama[1272]: time=2025-03-10T21:34:09.962+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 10 21:34:09 shadow ollama[1272]: time=2025-03-10T21:34:09.963+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 10 21:34:09 shadow ollama[1272]: time=2025-03-10T21:34:09.996+05:30 level=INFO source=routes.go:1256 msg="Listening on 127.0.0.1:11434 (version 0.5.12)"
+Mar 10 21:34:10 shadow ollama[1272]: time=2025-03-10T21:34:10.061+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 10 21:34:10 shadow ollama[1272]: time=2025-03-10T21:34:10.813+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 10 21:34:10 shadow ollama[1272]: time=2025-03-10T21:34:10.813+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="6.7 GiB"
+Mar 13 22:08:09 shadow ollama[1272]: [GIN] 2025/03/13 - 22:08:09 | 200 |     210.529µs |       127.0.0.1 | GET      "/api/version"
+Mar 13 22:30:17 shadow ollama[1272]: [GIN] 2025/03/13 - 22:30:17 | 200 |  814.653069ms |       127.0.0.1 | GET      "/api/version"
+Mar 13 22:40:52 shadow systemd[1]: Stopping Ollama Service...
+Mar 13 22:40:52 shadow systemd[1]: ollama.service: Succeeded.
+Mar 13 22:40:52 shadow systemd[1]: Stopped Ollama Service.
+Mar 13 22:43:21 shadow systemd[1]: Started Ollama Service.
+Mar 13 22:43:21 shadow ollama[34985]: 2025/03/13 22:43:21 routes.go:1225: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:2048 OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/usr/share/ollama/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+Mar 13 22:43:21 shadow ollama[34985]: time=2025-03-13T22:43:21.773+05:30 level=INFO source=images.go:432 msg="total blobs: 11"
+Mar 13 22:43:21 shadow ollama[34985]: time=2025-03-13T22:43:21.774+05:30 level=INFO source=images.go:439 msg="total unused blobs removed: 0"
+Mar 13 22:43:21 shadow ollama[34985]: time=2025-03-13T22:43:21.775+05:30 level=INFO source=routes.go:1292 msg="Listening on 127.0.0.1:11434 (version 0.6.0)"
+Mar 13 22:43:21 shadow ollama[34985]: time=2025-03-13T22:43:21.775+05:30 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+Mar 13 22:43:21 shadow ollama[34985]: time=2025-03-13T22:43:21.820+05:30 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+Mar 13 22:43:21 shadow ollama[34985]: time=2025-03-13T22:43:21.821+05:30 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="7.7 GiB" available="3.8 GiB"
+Mar 13 22:43:25 shadow ollama[34985]: [GIN] 2025/03/13 - 22:43:25 | 200 |   89.274844ms |       127.0.0.1 | HEAD     "/"
+Mar 13 22:43:25 shadow ollama[34985]: [GIN] 2025/03/13 - 22:43:25 | 200 |   38.387122ms |       127.0.0.1 | GET      "/api/tags"
+Mar 13 22:43:41 shadow ollama[34985]: [GIN] 2025/03/13 - 22:43:41 | 200 |      34.064µs |       127.0.0.1 | HEAD     "/"
+Mar 13 22:43:41 shadow ollama[34985]: [GIN] 2025/03/13 - 22:43:41 | 200 |     520.113µs |       127.0.0.1 | GET      "/api/tags"
+Mar 13 22:43:54 shadow ollama[34985]: [GIN] 2025/03/13 - 22:43:54 | 200 |      24.399µs |       127.0.0.1 | HEAD     "/"
+Mar 13 22:43:54 shadow ollama[34985]: [GIN] 2025/03/13 - 22:43:54 | 200 |  144.936829ms |       127.0.0.1 | POST     "/api/generate"
+Mar 13 22:43:54 shadow ollama[34985]: [GIN] 2025/03/13 - 22:43:54 | 200 |  354.617384ms |       127.0.0.1 | DELETE   "/api/delete"
+Mar 13 22:44:02 shadow ollama[34985]: [GIN] 2025/03/13 - 22:44:02 | 200 |      30.064µs |       127.0.0.1 | HEAD     "/"
+Mar 13 22:44:05 shadow ollama[34985]: time=2025-03-13T22:44:05.502+05:30 level=INFO source=download.go:176 msg="downloading dbe81da1e4ba in 9 100 MB part(s)"
+Mar 13 22:48:38 shadow ollama[34985]: time=2025-03-13T22:48:38.572+05:30 level=INFO source=download.go:176 msg="downloading e0a42594d802 in 1 358 B part(s)"
+Mar 13 22:48:40 shadow ollama[34985]: time=2025-03-13T22:48:40.189+05:30 level=INFO source=download.go:176 msg="downloading dd084c7d92a3 in 1 8.4 KB part(s)"
+Mar 13 22:48:41 shadow ollama[34985]: time=2025-03-13T22:48:41.854+05:30 level=INFO source=download.go:176 msg="downloading 0a74a8735bf3 in 1 55 B part(s)"
+Mar 13 22:48:43 shadow ollama[34985]: time=2025-03-13T22:48:43.468+05:30 level=INFO source=download.go:176 msg="downloading cc0038d7c4c6 in 1 492 B part(s)"
+Mar 13 22:49:00 shadow ollama[34985]: [GIN] 2025/03/13 - 22:49:00 | 200 |         4m58s |       127.0.0.1 | POST     "/api/pull"
+Mar 13 22:50:25 shadow ollama[34985]: [GIN] 2025/03/13 - 22:50:25 | 404 |   89.659267ms |       127.0.0.1 | POST     "/api/chat"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.158+05:30 level=INFO source=server.go:105 msg="system memory" total="7.7 GiB" free="3.6 GiB" free_swap="1.9 GiB"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.159+05:30 level=INFO source=server.go:138 msg=offload library=cpu layers.requested=-1 layers.model=27 layers.offload=0 layers.split="" memory.available="[3.6 GiB]" memory.gpu_overhead="0 B" memory.required.full="1.5 GiB" memory.required.partial="0 B" memory.required.kv="208.0 MiB" memory.required.allocations="[1.5 GiB]" memory.weights.total="664.5 MiB" memory.weights.repeating="358.5 MiB" memory.weights.nonrepeating="306.0 MiB" memory.graph.full="514.2 MiB" memory.graph.partial="750.5 MiB"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.334+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.440+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.add_eot_token default=false
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.num_channels default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.block_count default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.embedding_length default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.head_count default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.layer_norm_epsilon default=0
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.480+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.508+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.rope.freq_scale default=1
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.508+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.mm_tokens_per_image default=256
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.509+05:30 level=INFO source=server.go:405 msg="starting llama server" cmd="/usr/local/bin/ollama runner --ollama-engine --model /usr/share/ollama/.ollama/models/blobs/sha256-dbe81da1e4bad3cc6ccb77540915ffe53e7a3ac0745ffa5e9d4626d39c15e09a --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 35273"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.510+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.510+05:30 level=INFO source=server.go:585 msg="waiting for llama runner to start responding"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.510+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server error"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.664+05:30 level=INFO source=runner.go:882 msg="starting ollama engine"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.664+05:30 level=INFO source=runner.go:938 msg="Server listening on 127.0.0.1:35273"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.762+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server loading model"
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.829+05:30 level=WARN source=ggml.go:149 msg="key not found" key=general.name default=""
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.829+05:30 level=WARN source=ggml.go:149 msg="key not found" key=general.description default=""
+Mar 13 22:50:37 shadow ollama[34985]: time=2025-03-13T22:50:37.829+05:30 level=INFO source=ggml.go:67 msg="" architecture=gemma3 file_type=Q4_K_M name="" description="" num_tensors=340 num_key_values=32
+Mar 13 22:50:38 shadow ollama[34985]: load_backend: loaded CPU backend from /usr/local/lib/ollama/libggml-cpu-haswell.so
+Mar 13 22:50:38 shadow ollama[34985]: time=2025-03-13T22:50:38.021+05:30 level=INFO source=ggml.go:109 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 compiler=cgo(gcc)
+Mar 13 22:50:38 shadow ollama[34985]: time=2025-03-13T22:50:38.038+05:30 level=INFO source=ggml.go:289 msg="model weights" buffer=CPU size="1.0 GiB"
+Mar 13 22:50:39 shadow ollama[34985]: time=2025-03-13T22:50:39.579+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server not responding"
+Mar 13 22:50:39 shadow ollama[34985]: time=2025-03-13T22:50:39.831+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server loading model"
+Mar 13 22:50:44 shadow ollama[34985]: time=2025-03-13T22:50:44.568+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server not responding"
+Mar 13 22:50:44 shadow ollama[34985]: time=2025-03-13T22:50:44.820+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server loading model"
+Mar 13 22:50:49 shadow ollama[34985]: time=2025-03-13T22:50:49.659+05:30 level=INFO source=ggml.go:356 msg="compute graph" backend=CPU buffer_type=CPU
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.855+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.878+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.add_eot_token default=false
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.num_channels default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.block_count default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.embedding_length default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.head_count default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.905+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.layer_norm_epsilon default=0
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.906+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.917+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.rope.freq_scale default=1
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:49.917+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.mm_tokens_per_image default=256
+Mar 13 22:50:51 shadow ollama[34985]: time=2025-03-13T22:50:50.638+05:30 level=INFO source=server.go:624 msg="llama runner started in 13.13 seconds"
+Mar 13 22:51:23 shadow ollama[34985]: [GIN] 2025/03/13 - 22:51:23 | 200 | 46.161997345s |       127.0.0.1 | POST     "/api/chat"
+Mar 13 22:52:42 shadow ollama[34985]: [GIN] 2025/03/13 - 22:52:42 | 200 | 33.641428979s |       127.0.0.1 | POST     "/api/chat"
+Mar 13 22:54:20 shadow ollama[34985]: [GIN] 2025/03/13 - 22:54:20 | 200 |   23.613274ms |       127.0.0.1 | HEAD     "/"
+Mar 13 22:54:20 shadow ollama[34985]: [GIN] 2025/03/13 - 22:54:20 | 200 |     135.172µs |       127.0.0.1 | GET      "/api/ps"
+Mar 13 22:54:31 shadow ollama[34985]: [GIN] 2025/03/13 - 22:54:31 | 200 |      31.359µs |       127.0.0.1 | HEAD     "/"
+Mar 13 22:54:31 shadow ollama[34985]: [GIN] 2025/03/13 - 22:54:31 | 200 |      49.891µs |       127.0.0.1 | GET      "/api/ps"
+Mar 13 22:54:41 shadow ollama[34985]: [GIN] 2025/03/13 - 22:54:41 | 200 | 42.926939295s |       127.0.0.1 | POST     "/api/chat"
+Mar 13 23:14:26 shadow ollama[34985]: [GIN] 2025/03/13 - 23:14:26 | 200 |      34.254µs |       127.0.0.1 | HEAD     "/"
+Mar 13 23:14:26 shadow ollama[34985]: [GIN] 2025/03/13 - 23:14:26 | 200 |       21.04µs |       127.0.0.1 | GET      "/api/ps"
+Mar 13 23:14:43 shadow ollama[34985]: [GIN] 2025/03/13 - 23:14:43 | 200 |      40.506µs |       127.0.0.1 | HEAD     "/"
+Mar 13 23:14:43 shadow ollama[34985]: [GIN] 2025/03/13 - 23:14:43 | 200 |      10.351µs |       127.0.0.1 | GET      "/api/ps"
+Mar 13 23:15:03 shadow ollama[34985]: time=2025-03-13T23:15:03.054+05:30 level=INFO source=server.go:105 msg="system memory" total="7.7 GiB" free="3.9 GiB" free_swap="1.9 GiB"
+Mar 13 23:15:03 shadow ollama[34985]: time=2025-03-13T23:15:03.055+05:30 level=INFO source=server.go:138 msg=offload library=cpu layers.requested=-1 layers.model=27 layers.offload=0 layers.split="" memory.available="[3.9 GiB]" memory.gpu_overhead="0 B" memory.required.full="1.5 GiB" memory.required.partial="0 B" memory.required.kv="208.0 MiB" memory.required.allocations="[1.5 GiB]" memory.weights.total="664.5 MiB" memory.weights.repeating="358.5 MiB" memory.weights.nonrepeating="306.0 MiB" memory.graph.full="514.2 MiB" memory.graph.partial="750.5 MiB"
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.687+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.696+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.add_eot_token default=false
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.912+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.num_channels default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.block_count default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.embedding_length default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.head_count default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.layer_norm_epsilon default=0
+Mar 13 23:15:04 shadow ollama[34985]: time=2025-03-13T23:15:04.913+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 23:15:05 shadow ollama[34985]: time=2025-03-13T23:15:05.036+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.rope.freq_scale default=1
+Mar 13 23:15:05 shadow ollama[34985]: time=2025-03-13T23:15:05.036+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.mm_tokens_per_image default=256
+Mar 13 23:15:05 shadow ollama[34985]: time=2025-03-13T23:15:05.377+05:30 level=INFO source=server.go:405 msg="starting llama server" cmd="/usr/local/bin/ollama runner --ollama-engine --model /usr/share/ollama/.ollama/models/blobs/sha256-dbe81da1e4bad3cc6ccb77540915ffe53e7a3ac0745ffa5e9d4626d39c15e09a --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 41175"
+Mar 13 23:15:05 shadow ollama[34985]: time=2025-03-13T23:15:05.418+05:30 level=INFO source=runner.go:882 msg="starting ollama engine"
+Mar 13 23:15:05 shadow ollama[34985]: time=2025-03-13T23:15:05.378+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 13 23:15:05 shadow ollama[34985]: time=2025-03-13T23:15:05.607+05:30 level=INFO source=server.go:585 msg="waiting for llama runner to start responding"
+Mar 13 23:15:05 shadow ollama[34985]: time=2025-03-13T23:15:05.786+05:30 level=INFO source=runner.go:938 msg="Server listening on 127.0.0.1:41175"
+Mar 13 23:15:05 shadow ollama[34985]: time=2025-03-13T23:15:05.807+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server not responding"
+Mar 13 23:15:06 shadow ollama[34985]: time=2025-03-13T23:15:06.122+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server loading model"
+Mar 13 23:15:06 shadow ollama[34985]: time=2025-03-13T23:15:06.405+05:30 level=WARN source=ggml.go:149 msg="key not found" key=general.name default=""
+Mar 13 23:15:06 shadow ollama[34985]: time=2025-03-13T23:15:06.405+05:30 level=WARN source=ggml.go:149 msg="key not found" key=general.description default=""
+Mar 13 23:15:06 shadow ollama[34985]: time=2025-03-13T23:15:06.405+05:30 level=INFO source=ggml.go:67 msg="" architecture=gemma3 file_type=Q4_K_M name="" description="" num_tensors=340 num_key_values=32
+Mar 13 23:15:10 shadow ollama[34985]: load_backend: loaded CPU backend from /usr/local/lib/ollama/libggml-cpu-haswell.so
+Mar 13 23:15:10 shadow ollama[34985]: time=2025-03-13T23:15:10.059+05:30 level=INFO source=ggml.go:109 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 compiler=cgo(gcc)
+Mar 13 23:15:10 shadow ollama[34985]: time=2025-03-13T23:15:10.063+05:30 level=INFO source=ggml.go:289 msg="model weights" buffer=CPU size="1.0 GiB"
+Mar 13 23:15:15 shadow ollama[34985]: time=2025-03-13T23:15:15.622+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server not responding"
+Mar 13 23:15:17 shadow ollama[34985]: time=2025-03-13T23:15:17.313+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server loading model"
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.505+05:30 level=INFO source=ggml.go:356 msg="compute graph" backend=CPU buffer_type=CPU
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.506+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.531+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.add_eot_token default=false
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.550+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.num_channels default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.block_count default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.embedding_length default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.head_count default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.layer_norm_epsilon default=0
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.551+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.589+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.rope.freq_scale default=1
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.589+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.mm_tokens_per_image default=256
+Mar 13 23:15:31 shadow ollama[34985]: time=2025-03-13T23:15:31.648+05:30 level=INFO source=server.go:624 msg="llama runner started in 26.04 seconds"
+Mar 13 23:15:37 shadow ollama[34985]: [GIN] 2025/03/13 - 23:15:37 | 200 | 35.060297834s |       127.0.0.1 | POST     "/api/chat"
+Mar 13 23:16:42 shadow ollama[34985]: [GIN] 2025/03/13 - 23:16:42 | 200 |     168.678µs |       127.0.0.1 | HEAD     "/"
+Mar 13 23:16:45 shadow ollama[34985]: [GIN] 2025/03/13 - 23:16:45 | 200 |   2.34011367s |       127.0.0.1 | POST     "/api/generate"
+Mar 13 23:16:47 shadow ollama[34985]: [GIN] 2025/03/13 - 23:16:47 | 200 |  1.951712042s |       127.0.0.1 | DELETE   "/api/delete"
+Mar 13 23:21:47 shadow ollama[34985]: [GIN] 2025/03/13 - 23:21:47 | 404 |    1.378418ms |       127.0.0.1 | POST     "/api/chat"
+Mar 13 23:22:01 shadow ollama[34985]: [GIN] 2025/03/13 - 23:22:01 | 200 |      23.392µs |       127.0.0.1 | HEAD     "/"
+Mar 13 23:22:09 shadow ollama[34985]: time=2025-03-13T23:22:09.864+05:30 level=INFO source=download.go:176 msg="downloading dbe81da1e4ba in 9 100 MB part(s)"
+Mar 13 23:23:35 shadow ollama[34985]: time=2025-03-13T23:23:35.270+05:30 level=INFO source=download.go:294 msg="dbe81da1e4ba part 3 attempt 0 failed: unexpected EOF, retrying in 1s"
+Mar 13 23:24:15 shadow ollama[34985]: [GIN] 2025/03/13 - 23:24:15 | 200 |      45.928µs |       127.0.0.1 | HEAD     "/"
+Mar 13 23:24:15 shadow ollama[34985]: [GIN] 2025/03/13 - 23:24:15 | 404 |     503.799µs |       127.0.0.1 | POST     "/api/generate"
+Mar 13 23:24:15 shadow ollama[34985]: [GIN] 2025/03/13 - 23:24:15 | 404 |     267.549µs |       127.0.0.1 | DELETE   "/api/delete"
+Mar 13 23:26:34 shadow ollama[34985]: time=2025-03-13T23:26:34.983+05:30 level=INFO source=download.go:176 msg="downloading e0a42594d802 in 1 358 B part(s)"
+Mar 13 23:26:36 shadow ollama[34985]: time=2025-03-13T23:26:36.841+05:30 level=INFO source=download.go:176 msg="downloading dd084c7d92a3 in 1 8.4 KB part(s)"
+Mar 13 23:26:38 shadow ollama[34985]: time=2025-03-13T23:26:38.683+05:30 level=INFO source=download.go:176 msg="downloading 0a74a8735bf3 in 1 55 B part(s)"
+Mar 13 23:26:40 shadow ollama[34985]: time=2025-03-13T23:26:40.328+05:30 level=INFO source=download.go:176 msg="downloading cc0038d7c4c6 in 1 492 B part(s)"
+Mar 13 23:26:44 shadow ollama[34985]: [GIN] 2025/03/13 - 23:26:44 | 200 |         4m42s |       127.0.0.1 | POST     "/api/pull"
+Mar 13 23:28:13 shadow ollama[34985]: time=2025-03-13T23:28:13.943+05:30 level=INFO source=server.go:105 msg="system memory" total="7.7 GiB" free="4.0 GiB" free_swap="1.8 GiB"
+Mar 13 23:28:13 shadow ollama[34985]: time=2025-03-13T23:28:13.944+05:30 level=INFO source=server.go:138 msg=offload library=cpu layers.requested=-1 layers.model=27 layers.offload=0 layers.split="" memory.available="[4.0 GiB]" memory.gpu_overhead="0 B" memory.required.full="1.5 GiB" memory.required.partial="0 B" memory.required.kv="208.0 MiB" memory.required.allocations="[1.5 GiB]" memory.weights.total="664.5 MiB" memory.weights.repeating="358.5 MiB" memory.weights.nonrepeating="306.0 MiB" memory.graph.full="514.2 MiB" memory.graph.partial="750.5 MiB"
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.074+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.079+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.add_eot_token default=false
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.num_channels default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.block_count default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.embedding_length default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.head_count default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.layer_norm_epsilon default=0
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.083+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.092+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.rope.freq_scale default=1
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.092+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.mm_tokens_per_image default=256
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.306+05:30 level=INFO source=server.go:405 msg="starting llama server" cmd="/usr/local/bin/ollama runner --ollama-engine --model /usr/share/ollama/.ollama/models/blobs/sha256-dbe81da1e4bad3cc6ccb77540915ffe53e7a3ac0745ffa5e9d4626d39c15e09a --ctx-size 8192 --batch-size 512 --threads 4 --no-mmap --parallel 4 --port 38947"
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.307+05:30 level=INFO source=sched.go:450 msg="loaded runners" count=1
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.307+05:30 level=INFO source=server.go:585 msg="waiting for llama runner to start responding"
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.308+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server error"
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.348+05:30 level=INFO source=runner.go:882 msg="starting ollama engine"
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.350+05:30 level=INFO source=runner.go:938 msg="Server listening on 127.0.0.1:38947"
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.506+05:30 level=WARN source=ggml.go:149 msg="key not found" key=general.name default=""
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.506+05:30 level=WARN source=ggml.go:149 msg="key not found" key=general.description default=""
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.506+05:30 level=INFO source=ggml.go:67 msg="" architecture=gemma3 file_type=Q4_K_M name="" description="" num_tensors=340 num_key_values=32
+Mar 13 23:28:14 shadow ollama[34985]: time=2025-03-13T23:28:14.561+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server loading model"
+Mar 13 23:28:17 shadow ollama[34985]: load_backend: loaded CPU backend from /usr/local/lib/ollama/libggml-cpu-haswell.so
+Mar 13 23:28:17 shadow ollama[34985]: time=2025-03-13T23:28:17.327+05:30 level=INFO source=ggml.go:109 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 compiler=cgo(gcc)
+Mar 13 23:28:17 shadow ollama[34985]: time=2025-03-13T23:28:17.331+05:30 level=INFO source=ggml.go:289 msg="model weights" buffer=CPU size="1.0 GiB"
+Mar 13 23:28:21 shadow ollama[34985]: time=2025-03-13T23:28:20.755+05:30 level=INFO source=ggml.go:356 msg="compute graph" backend=CPU buffer_type=CPU
+Mar 13 23:28:21 shadow ollama[34985]: time=2025-03-13T23:28:21.938+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server not responding"
+Mar 13 23:28:21 shadow ollama[34985]: time=2025-03-13T23:28:21.937+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 23:28:21 shadow ollama[34985]: time=2025-03-13T23:28:21.950+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.add_eot_token default=false
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.191+05:30 level=INFO source=server.go:619 msg="waiting for server to become available" status="llm server loading model"
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.num_channels default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.block_count default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.embedding_length default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.head_count default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.image_size default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.patch_size default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.vision.attention.layer_norm_epsilon default=0
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.266+05:30 level=WARN source=ggml.go:149 msg="key not found" key=tokenizer.ggml.pretokenizer default="(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.289+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.rope.freq_scale default=1
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.289+05:30 level=WARN source=ggml.go:149 msg="key not found" key=gemma3.mm_tokens_per_image default=256
+Mar 13 23:28:22 shadow ollama[34985]: time=2025-03-13T23:28:22.694+05:30 level=INFO source=server.go:624 msg="llama runner started in 8.39 seconds"
+Mar 13 23:29:13 shadow ollama[34985]: [GIN] 2025/03/13 - 23:29:13 | 200 | 59.538838872s |       127.0.0.1 | POST     "/api/chat"
+Mar 13 23:31:24 shadow ollama[34985]: [GIN] 2025/03/13 - 23:31:24 | 200 | 51.446706023s |       127.0.0.1 | POST     "/api/chat"

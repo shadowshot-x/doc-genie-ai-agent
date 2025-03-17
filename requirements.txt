@@ -1,0 +1,6 @@
+ollama
+langchain_ollama
+langchain_core
+langgraph
+duckdb
+pandas
