@@ -11,6 +11,11 @@ Tools
 2. Langgraph
 3. Langchain
 
+Platform Used to Build \[Platform is generic and can be used by any OS\]
+```
+Ubuntu 20.04. RAM - 8BG. No GPU
+```
+
 Python3.9+ is required
 
 Starting Ollama
@@ -19,17 +24,28 @@ sudo systemctl start ollama
 ```
 
 Model Used \[Tool Support Needed in LLM\]
-1. granite3.2:2b
+1. `granite3.2:2b`
 
 Stopping Ollama
 ```
 sudo systemctl stop ollama
 ```
 
-## Part 1
-1. What is Ollama and how to use it.
-2. What is Langchain and how to use it.
-3. How to provide tools to your LLM.
-4. Make Sure LLM is using the Tools that are provided.
-5. Run the Agent to get Actionable Insights.
+## Part 1 \[Blog Soon\]
+1. What is Ollama?
+2. What is Langchain?
+3. How to provide tools to your Agent?
+4. Run the Agent to get Interesting Insights.
+5. Issues in the Current Flow
 
+### How to Run
+```
+python3 app/backend/main.py
+```
+
+## Part 2
+1. What is Langgraph?
+2. Integrate Chatbot using Langgraph
+3. Adding Additional Tools
+4. Creating Tool Router in Langgraph
+5. Clean the code into classes
