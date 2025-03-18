@@ -1,37 +1,58 @@
 from langchain_ollama import ChatOllama
-from langchain_core.messages import HumanMessage
-from langgraph.checkpoint.memory import MemorySaver
-from langgraph.prebuilt import create_react_agent
-import pandas as pd
-import duckdb
+from typing import Annotated
+from typing_extensions import TypedDict
+from langgraph.graph import StateGraph
+from langgraph.graph.message import add_messages
+from langgraph.prebuilt import ToolNode, tools_condition
+from tools import tool
+
+class State(TypedDict):
+    messages: Annotated[list, add_messages]
 
 
-model = ChatOllama(model="granite3.2:2b")
-
-def querycsv(query: str) -> str:
-    """
-query resource.csv using SQL only. The resource.csv contains subject and marks column.
-Table name in SQL is always df
-    """
-    df = pd.read_csv("app/backend/resource.csv")
-    # q1= """SELECT col1 FROM df"""
-    query = query.replace("resource.csv", "df")
-
-    mod_df = duckdb.query(query).df()
-    return mod_df.to_string()
+graph_builder = StateGraph(State)
 
 
-tools = [querycsv]
-# prompt= """
-# You are an AI Agent that queries resource.csv file and give information. You always call tools with SQL Query
-# """
-# agent_executor = create_react_agent(model, tools=tools, prompt=prompt)
-agent_executor = create_react_agent(model, tools=tools)
+tool = tool.querycsv
+tools = [tool]
+llm = ChatOllama(model="granite3.2:2b")
+llm_with_tools = llm.bind_tools(tools)
 
-config = {"configurable": {"thread_id": "test"}}
-for step in agent_executor.stream(
-    {"messages": [HumanMessage(content="Get average over marks column. Query resource.csv")]},
-    config,
-    stream_mode="values",
-):
-    step["messages"][-1].pretty_print()
+
+def chatbot(state: State):
+    return {"messages": [llm_with_tools.invoke(state["messages"])]}
+
+
+graph_builder.add_node("chatbot", chatbot)
+
+tool_node = ToolNode(tools=[tool])
+graph_builder.add_node("tools", tool_node)
+
+graph_builder.add_conditional_edges(
+    "chatbot",
+    tools_condition,
+)
+# Any time a tool is called, we return to the chatbot to decide the next step
+graph_builder.add_edge("tools", "chatbot")
+graph_builder.set_entry_point("chatbot")
+graph = graph_builder.compile()
+
+def stream_graph_updates(user_input: str):
+    for event in graph.stream({"messages": [{"role": "user", "content": user_input}]}):
+        for value in event.values():
+            print("Assistant:", value["messages"][-1].content)
+
+while True:
+    try:
+        user_input = input("User: ")
+        if user_input.lower() in ["quit", "exit", "q"]:
+            print("Goodbye!")
+            break
+
+        stream_graph_updates(user_input)
+    except:
+        # fallback if input() is not available
+        user_input = "What do you know about LangGraph?"
+        print("User: " + user_input)
+        stream_graph_updates(user_input)
+        break
