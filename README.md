@@ -47,5 +47,11 @@ python3 app/backend/main.py
 1. What is Langgraph?
 2. Integrate Chatbot using Langgraph
 3. Adding Additional Tools
-4. Creating Tool Router in Langgraph
-5. Clean the code into classes
+4. Test the Flow and Visualize
+
+## Part 3
+1. More about Nodes and Edges
+2. Create a Custom Node in Langgraph
+3. How to Integrate Custom Node with Edges
+4. Add Local Memory to Agent
+5. Clean the Code
