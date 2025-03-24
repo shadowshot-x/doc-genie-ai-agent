@@ -55,3 +55,10 @@ python3 app/backend/main.py
 3. How to Integrate Custom Node with Edges
 4. Add Local Memory to Agent
 5. Clean the Code
+
+## Part 4
+1. Adding a Router Node
+2. How to Utilize and Manipulate State
+3. Building Text Agent
+4. Add Conditional Routing Edges between multiple Agents
+5. Fan out - Fan in Structure
