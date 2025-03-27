@@ -6,12 +6,15 @@ from langchain_core.messages import AnyMessage
 from pydantic import BaseModel
 from rag import rag
 from langchain.tools.retriever import create_retriever_tool
+from config.config import Config
 
-retriever_tool = create_retriever_tool(
-    rag.init_chroma_retiever(),
-    "retrieve_open_source_info",
-    "Search and return information about open source like features and examples from opensource.txt",
-)
+def initialize_retriever_tool(config: Config):
+    retriever_tool = create_retriever_tool(
+        rag.init_chroma_retiever(config),
+        "retrieve_open_source_info",
+        "Search and return information about open source like features and examples from opensource.txt",
+    )
+    return retriever_tool
 
 def querycsv(query: str) -> str:
     """

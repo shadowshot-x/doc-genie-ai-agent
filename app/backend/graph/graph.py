@@ -4,9 +4,10 @@ from typing_extensions import TypedDict, Literal, Any
 from langgraph.graph import StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
-from tools.tool import querycsv, csv_tools_condition,retriever_tool, txt_tools_condition, router_condition
+from tools.tool import querycsv, csv_tools_condition,initialize_retriever_tool, txt_tools_condition, router_condition
 from pydantic import BaseModel, Field
 from langchain_core.messages import SystemMessage, AIMessage
+from config.config import Config
 
 
 class State(TypedDict):
@@ -19,10 +20,11 @@ class Route(BaseModel):
 
 
 def init_graph():
+    config = Config()
     graph_builder = StateGraph(State)
     csv_tools = [querycsv]
-    txt_tools = [retriever_tool]
-    llm = ChatOllama(model="granite3.2:2b")
+    txt_tools = [initialize_retriever_tool(config)]
+    llm = ChatOllama(model=config.model_name)
     router_llm_with_structure = llm.with_structured_output(Route)
     csv_llm_with_tools = llm.bind_tools(csv_tools)
     txt_llm_with_tools = llm.bind_tools(txt_tools)
