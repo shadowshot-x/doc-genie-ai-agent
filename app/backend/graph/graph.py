@@ -1,10 +1,10 @@
 from langchain_ollama import ChatOllama
-from typing import Annotated, Union
+from typing import Annotated
 from typing_extensions import TypedDict, Literal, Any
 from langgraph.graph import StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
-from tools.tool import querycsv, csv_tools_condition, read_text, txt_tools_condition, router_condition
+from tools.tool import querycsv, csv_tools_condition,retriever_tool, txt_tools_condition, router_condition
 from pydantic import BaseModel, Field
 from langchain_core.messages import SystemMessage, AIMessage
 
@@ -21,7 +21,7 @@ class Route(BaseModel):
 def init_graph():
     graph_builder = StateGraph(State)
     csv_tools = [querycsv]
-    txt_tools = [read_text]
+    txt_tools = [retriever_tool]
     llm = ChatOllama(model="granite3.2:2b")
     router_llm_with_structure = llm.with_structured_output(Route)
     csv_llm_with_tools = llm.bind_tools(csv_tools)
@@ -68,6 +68,13 @@ def init_graph():
         state["messages"].append(response)
         return state
     
+    def summarize_text(state: State):
+        toolMessage = str(state["messages"][-1].content)
+        humanMessage = str(state["messages"][-3].content)
+        response = llm.invoke(f"summarize text for {humanMessage} : \n{toolMessage}")
+        state["messages"].append(response)
+        return state
+    
     csv_tool_node = ToolNode(tools=csv_tools)
     txt_tool_node = ToolNode(tools=txt_tools)
 
@@ -78,6 +85,7 @@ def init_graph():
     graph_builder.add_node("router", router)
     graph_builder.add_node("txt_agent_input", txt_llm_input)
     graph_builder.add_node("txt_tools", txt_tool_node)
+    graph_builder.add_node("summarize_text", summarize_text)
 
 
     graph_builder.add_conditional_edges(
@@ -96,7 +104,8 @@ def init_graph():
     )
 
     graph_builder.add_edge("csv_tools", "assistant")
-    # graph_builder.add_edge("router","txt_agent_input")
+    graph_builder.add_edge("txt_tools", "summarize_text")
+
     graph_builder.set_entry_point("router")
 
     graph = graph_builder.compile()

@@ -1,0 +1,18 @@
+Open source refers to software that is developed openly and made available for use or modification by anyone. Open source software is developed through public collaboration. 
+
+Features of open source software
+1. Free: Open source software is free to download and use. 
+2. Modifiable: Open source software can be modified and redistributed. 
+3. Commercially usable: Open source software can be used for profit without restrictions. 
+4. Code reuse: Open source software typically has no restrictions on code reuse. 
+
+
+Examples of open source software 
+
+1. WordPress: A popular open source software
+2. LibreOffice: A free and open source office suite
+3. GIMP: A free and open source image manipulation program
+4. GNU: A free operating system that can be downloaded and developed for free
+5. Python: A free, open-source programming language
+6. VLC Media Player: An open-source media player that supports various encodings and formats
+7. Git: An open-source repository that helps manage code, documents, and applications
