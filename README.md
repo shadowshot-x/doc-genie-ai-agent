@@ -31,17 +31,19 @@ Stopping Ollama
 sudo systemctl stop ollama
 ```
 
-## Part 1 \[Blog Soon\]
+### How to Run
+```
+python3 app/backend/main.py
+```
+
+## Part 1 : [BLOG LINK](https://levelup.gitconnected.com/building-ai-agents-from-scratch-using-langgraph-and-ollama-part-1-3f91068d6dc3?gi=350f1ef173ea)
 1. What is Ollama?
 2. What is Langchain?
 3. How to provide tools to your Agent?
 4. Run the Agent to get Interesting Insights.
 5. Issues in the Current Flow
 
-### How to Run
-```
-python3 app/backend/main.py
-```
+![alt text](/figs/docgenie-basic-structure.jpg)
 
 ## Part 2
 1. What is Langgraph?
@@ -61,4 +63,16 @@ python3 app/backend/main.py
 2. How to Utilize and Manipulate State
 3. Building Text Agent
 4. Add Conditional Routing Edges between multiple Agents
-5. Fan out - Fan in Structure
+5. Understanding the Architecture
+
+## Part 5
+1. Understanding RAG
+2. Setting up and Running ChromaDB
+3. Ingesting Documents into ChromaDB
+4. Integrating RAG with Agent
+5. Understandint the Flow
+
+```
+docker run -d --rm --name chromadb -p 8000:8000 -v ./chroma:/chroma/chroma -e IS_PERSISTENT=TRUE -e ANONYMIZED_TELEMETRY=TRUE chromadb/chroma:0.6.3
+```
+

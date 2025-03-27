@@ -3,7 +3,15 @@ import duckdb
 from typing import Union
 from typing_extensions import Literal, Any
 from langchain_core.messages import AnyMessage
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
+from rag import rag
+from langchain.tools.retriever import create_retriever_tool
+
+retriever_tool = create_retriever_tool(
+    rag.init_chroma_retiever(),
+    "retrieve_open_source_info",
+    "Search and return information about open source like features and examples from opensource.txt",
+)
 
 def querycsv(query: str) -> str:
     """
