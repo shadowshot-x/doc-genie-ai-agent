@@ -45,6 +45,8 @@ python3 app/backend/main.py
 
 ![alt text](/figs/docgenie-basic-structure.jpg)
 
+**For those who don't have medium membership, I have summarized the blog using AI. It can be found [HERE](docs/part1.md)**
+
 ## Part 2
 1. What is Langgraph?
 2. Integrate Chatbot using Langgraph
