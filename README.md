@@ -47,18 +47,22 @@ python3 app/backend/main.py
 
 **For those who don't have medium membership, I have summarized the blog using AI. It can be found [HERE](docs/part1.md)**
 
-## Part 2
+## Part 2 [BLOG LINK](https://medium.com/gitconnected/building-ai-agents-from-scratch-using-langgraph-and-ollama-part-2-b62edbe23344)
 1. What is Langgraph?
 2. Integrate Chatbot using Langgraph
 3. Adding Additional Tools
 4. Test the Flow and Visualize
 
-## Part 3
+![alt text](/figs/part2.png)
+
+## Part 3 [BLOG LINK](https://levelup.gitconnected.com/custom-nodes-and-state-in-langgraph-powered-by-ollama-ebecb4566adf)
 1. More about Nodes and Edges
 2. Create a Custom Node in Langgraph
 3. How to Integrate Custom Node with Edges
 4. Add Local Memory to Agent
 5. Clean the Code
+
+![alt text](/figs/part3.png)
 
 ## Part 4
 1. Adding a Router Node
