@@ -10,3 +10,8 @@ chromadb
 langchain_community
 numpy<2.0
 sentence_transformers
+mcp
+pysqlite3-binary
+tiktoken
+langchain-mcp-adapters
+asyncio

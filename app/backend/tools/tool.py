@@ -38,7 +38,7 @@ read test.txt file from resources directory and return results.
 def csv_tools_condition(
     state: Union[list[AnyMessage], dict[str, Any], BaseModel],
     messages_key: str = "messages",
-) -> Literal["tools", "__end__"]:
+):
     if isinstance(state, list):
         ai_message = state[-1]
     elif isinstance(state, dict) and (messages := state.get(messages_key, [])):
@@ -54,7 +54,7 @@ def csv_tools_condition(
 def txt_tools_condition(
     state: Union[list[AnyMessage], dict[str, Any], BaseModel],
     messages_key: str = "messages",
-) -> Literal["tools", "__end__"]:
+):
     if isinstance(state, list):
         ai_message = state[-1]
     elif isinstance(state, dict) and (messages := state.get(messages_key, [])):
@@ -70,7 +70,7 @@ def txt_tools_condition(
 def router_condition(
     state: Union[list[AnyMessage], dict[str, Any], BaseModel],
     messages_key: str = "messages",
-) -> Literal["tools", "__end__"]:
+) :
     if isinstance(state, list):
         ai_message = state[-1]
     elif isinstance(state, dict) and (messages := state.get(messages_key, [])):
