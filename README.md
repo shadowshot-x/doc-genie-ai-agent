@@ -82,3 +82,8 @@ python3 app/backend/main.py
 docker run -d --rm --name chromadb -p 8000:8000 -v ./chroma:/chroma/chroma -e IS_PERSISTENT=TRUE -e ANONYMIZED_TELEMETRY=TRUE chromadb/chroma:0.6.3
 ```
 
+## Part 6
+1. Understanding MCP
+2. Create STDIO MCP FastServer
+3. Converting entire Call Stack to async
+4. Understanding Request Flow from LangGraph to MCP

@@ -8,7 +8,19 @@ from tools.tool import querycsv, csv_tools_condition,initialize_retriever_tool, 
 from pydantic import BaseModel, Field
 from langchain_core.messages import SystemMessage, AIMessage
 from config.config import Config
+from langchain_mcp_adapters.client import MultiServerMCPClient
+# import asyncio
 
+csv_client = MultiServerMCPClient(
+    {
+        "CSVTool": {
+            "command": "python",
+            # Replace with absolute path to your math_server.py file
+            "args": ["/home/ujjwal/Desktop/projects/doc-genie-ai-agent/app/backend/tools/mcp_csv_tool_server.py"],
+            "transport": "stdio",
+        }
+    }
+)
 
 class State(TypedDict):
     messages: Annotated[list, add_messages]
@@ -19,10 +31,12 @@ class Route(BaseModel):
     )
 
 
-def init_graph():
+async def init_graph():
     config = Config()
     graph_builder = StateGraph(State)
-    csv_tools = [querycsv]
+    csv_tools = await csv_client.get_tools()
+    print(csv_tools)
+
     txt_tools = [initialize_retriever_tool(config)]
     llm = ChatOllama(model=config.model_name)
     router_llm_with_structure = llm.with_structured_output(Route)
